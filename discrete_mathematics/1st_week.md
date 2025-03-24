@@ -153,3 +153,87 @@ $y = -1$\
 Now replace $y$ from the first equation with $-1$.\
 $2x - 1 = 7$\
 $x = 4$
+
+___
+##### 28
+$$
+\begin{cases}
+  4x + 2y = 4 \\
+  6x - y = 8
+\end{cases}
+$$
+$$
+\begin{cases}
+  4x + 2y = 4 \\
+  y = 6x - 8
+\end{cases}
+$$
+$$
+\begin{cases}
+  4x + 2(6x - 8) = 4 \\
+  y = 6x - 8
+\end{cases}
+$$
+$$
+\begin{cases}
+  4x + 2(6x - 8) = 4 \\
+  y = 6x - 8
+\end{cases}
+$$
+$$
+\begin{cases}
+  x = \frac{5}{4} \\
+  y = 6x - 8
+\end{cases}
+$$
+$$
+\begin{cases}
+  x = \frac{5}{4} \\
+  y = 6\frac{5}{4} - 8 = -\frac{1}{2}
+\end{cases}
+$$
+Replace roots;
+$$
+\begin{cases}
+  4\frac{5}{4} + 2(-\frac{1}{2}) = 4 \\
+  6\frac{5}{4} - (-\frac{1}{2}) = 8
+\end{cases}
+$$
+$$
+\begin{cases}
+  4 = 4\\
+  8 = 8
+\end{cases}
+$$
+
+The solution is: $(\frac{5}{4}, -\frac{1}{2})$
+
+___
+##### 29
+![GetImage (12)](https://github.com/user-attachments/assets/f8adb7f6-af70-4619-95ef-e915b681e0d2)\
+$h = -\frac{b}{2a} = \frac{6}{5} = \frac{3}{2}$\
+$k = f(h) = 2(\frac{3}{2})^2-6\frac{3}{2} + 7 = \frac{5}{2}$\
+The vertex of the function is: $(\frac{3}{2}, \frac{5}{2})$
+
+___
+##### 30
+**Find the domain and range of $f(x) = -5x^2 + 9 - 1$**\
+$D:\mathds{R}$\
+To find the range, we have to find vertex first:\
+$h = -\frac{b}{2a} = \frac{9}{10}$\
+$k = f(h) = -5(\frac{9}{10})^2 + 9\frac{9}{10} - 1 = \frac{61}{20}$\
+The range is $f(x) \le \frac{61}{20}$
+___
+##### 31
+**Find the $y$ and $x$ intercepts of the $f(x) = 3x^2 + 5x - 2$**\
+For $y$ intercepts replace $x$ with 0: $y = -2$\
+For $x$ intercepts replace $y$ with 0: \
+$0 = 3x^2 + 5x -2$ \
+$(3x - 1)(x + 2) = 0$\
+$3x - 1 = 0$ or $x + 2 = 0$\
+$x = \frac{1}{3}$ or $x = -2$ (in our case AND)
+
+___
+##### 32
+![GetImage (14)](https://github.com/user-attachments/assets/7408c43b-6588-48fd-9e46-420c9181ed46)\
+
