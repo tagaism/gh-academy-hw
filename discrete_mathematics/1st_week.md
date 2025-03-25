@@ -236,4 +236,41 @@ $x = \frac{1}{3}$ or $x = -2$ (in our case AND)
 ___
 ##### 32
 ![GetImage (14)](https://github.com/user-attachments/assets/7408c43b-6588-48fd-9e46-420c9181ed46)\
+a. [2, 6);
+b. (-2, -5);
+c. (-4, -6)
 
+___
+##### 33
+**Solve the inequality and graph the solution set. State the answer in both see builder notation and in interval notaion.**\
+**$10 - (2y + 1) /le -4(3y + 2) - 3$**\
+$y \le -2$\
+$[-2, +\infty)$
+
+___
+##### 34
+**Solve $x(x+3)^2(x-4) < 0$**\
+Find critical numbers first, such that the equation returns 0:\
+-3, 0, 4.\
+On the number line they create four regions.\
+Let's take 4 any numbers from each region.\
+-10, -2, 1, 10, and determine if the function is positive or negative:\
+$f(-10) = -10(-7)^2(-14)$ - is positive;\
+$f(-2) = -2(1)^2(-6)$ - is positive;\
+$f(1) = 1(1)(-3)$ - is negative;\
+$f(10) = 10(13)^2(6)$ - is positive;\
+We have to consider only the negative range, which is between 0 and 4 (both are not included)\
+$(0, 4)$
+
+___
+##### 35
+**Solve $2x^4 > 3x^3 + 9x^2$**\
+Same approach as in 34,
+$(-\infty, -\frac{3}{2}) \cup (3, +\infty)$
+
+___
+##### 36
+**Given the function $f(x) = -\frac{1}{2}|4x - 5| + 3$, determine the $x$-values for which the function values are negative.**\
+Intermedia form of the function is: $|4x - 5| = 6$\
+$x < -\frac{1}{4}$ or $x > 1\frac{1}{4}$\
+$(-\infty, -0.25)\cup(2.75, \infty)$
