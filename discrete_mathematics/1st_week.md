@@ -22,7 +22,7 @@ Yes!
 ___
 ##### 6
 ![Image](https://github.com/user-attachments/assets/6b90ddfa-d853-4509-81db-4f346dc8925a)\
-$f^-1(x) = x^2 - 4y + 8$
+$f^{-1}(x) = x^2 - 4y + 8$
 ___
 
 ##### 7
