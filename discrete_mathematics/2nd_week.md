@@ -32,3 +32,8 @@ Since $n \in \mathbb{Z} | n \le 0$
 There is no such $n$.
 ______
 ###### 6
+**In an arithmetic sequence, the 5th term is 20, and the 15th term is 60. Show that the 10th term is the arithmetic mean of the 5th and 15th terms.**\
+$d = \frac{a_{15} - a_{5}}{15 - 5} = \frac{60 - 20}{15 - 10} = 4$\
+$a_{10} = a_5 + 5 * 4 = 40$\
+$Mean = \frac{20 + 60}{2} = 40$\
+$=> a$ is Mean.
