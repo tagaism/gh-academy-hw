@@ -31,9 +31,25 @@ $n \approx 40.88$\
 Since $n \in \mathbb{Z} | n \le 0$
 There is no such $n$.
 ______
-###### 6
+##### 6
 **In an arithmetic sequence, the 5th term is 20, and the 15th term is 60. Show that the 10th term is the arithmetic mean of the 5th and 15th terms.**\
 $d = \frac{a_{15} - a_{5}}{15 - 5} = \frac{60 - 20}{15 - 10} = 4$\
 $a_{10} = a_5 + 5 * 4 = 40$\
 $Mean = \frac{20 + 60}{2} = 40$\
 $=> a$ is Mean.
+____
+##### 7
+**A stairscase has 20 steps. The first step is 5cm high, and each subsequent step is 0.5 cm higher then the previous one. What is the total height fot he staircase?**\
+$S_{20} = \frac{20}{2}[2 \times 5 +(20 - 1)\times 0.5]$\
+$S_{10} = 10[10 + 9.5] = 10 \times 19.5 = 195 cm$
+____
+##### 8
+**An arithemtic serires has a first term of 11 and a common difference of 3. Find the smallest value of $n$ such thatn the sum $S_n$ exceeds 1000**\
+$a_1 = 11, d = 3$\
+Let's first write the formula of sum for the first $n$ elements of series:\
+$S_n = \frac{n}{2}[2a_1 + (n - 1)d]$\
+$S_n = \frac{n}{2}[22 + (n - 1)3]$\
+$3n^2 + 19n - 2000 > 0$\
+By solving this quadratic equation, we will get:\
+$n \approx 23.84$\
+Round up the result - $n = 23$
