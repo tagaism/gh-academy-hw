@@ -53,3 +53,29 @@ $3n^2 + 19n - 2000 > 0$\
 By solving this quadratic equation, we will get:\
 $n \approx 23.84$\
 Round up the result - $n = 23$
+____
+##### 9
+**Rewrite $\sum_{k=3}^{12}4\left(\frac{1}{2}\right)^k$ as sum starting from $k=0$**\
+$\sum_{k = 3 - 3}^{12 - 3}4\left(\frac{1}{2}\right)^{k - 3} = \sum_{k = 0}^{9}4\left(\frac{1}{2}\right)^{k+3} = \sum_{k = 0}^{9}4\left(\frac{1}{2}\right)^{k}\left(\frac{1}{2}\right)^3 = \sum_{k = 0}^{9}\left(\frac{1}{2}\right)^{k+1}$
+____
+##### 10
+**Find the 10th term of a geometric sequence if $a_2 = -6$ and $a_5 = 48.$**\
+First let's find $d$.\
+$a_5 = a_3d^3$\
+$48 = -6d^3$\
+$d^3 = -8$\
+$d = -2$\
+Now let's find $a_10$\
+$a_n = a_kd^{k - n}$\
+$a_{10} = 48 (-2)^5 = 48 \times (-32) = -1536$
+_____
+##### 11
+**In a geometric sequence, $a_4 = 54$ and $a_7 = 1458$. Find the common ratio $r$.**\
+$1458 = 54d^3$\
+$d^3 = 1458 / 54 = 27$\
+$d = 3$
+___________________
+##### 12
+**Calculate the sum of the first 15 terms fo the geometric dquence where $a_1 = 8$ and $r = \frac{3}{4}$**\
+$S_n = a_1\frac{1 - r^n }{1 - r}$\
+$15 = 8\frac{1 -\left(\frac{3}{4}\right)^{15}}{1-\frac{3}{4}} \approx 32$
