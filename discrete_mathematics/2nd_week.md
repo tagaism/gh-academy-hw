@@ -115,7 +115,7 @@ $k = 2:\left(_{0}^5\right)(2x)^3(3y)^2=10\times8x^3\times9y^2=720x^3y^2$\
 $k = 3:\left(_{0}^5\right)(2x)^2(3y)^3=10\times4x^2\times27y^3=1080x^2y^3$\
 $k = 4:\left(_{0}^5\right)(2x)^1(3y)^4=5\times2x\times81y^4=810xy^4$\
 $k = 6:\left(_{0}^5\right)(2x)^0(3y)^5=243y^5$\
-And now combine the polinomial, wich will be look like:\
+And now combine the polinomial, wich will be look like:
 $(2x + 3y)^5 = 32x^5 + 240x^4y + 720x^3y^2 + 1080x^2y^3 + 810xy^4 + 243y^5.$
 _______________
 ##### 19
