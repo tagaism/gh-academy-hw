@@ -79,3 +79,49 @@ ___________________
 **Calculate the sum of the first 15 terms fo the geometric dquence where $a_1 = 8$ and $r = \frac{3}{4}$**\
 $S_n = a_1\frac{1 - r^n }{1 - r}$\
 $15 = 8\frac{1 -\left(\frac{3}{4}\right)^{15}}{1-\frac{3}{4}} \approx 32$
+___________
+##### 13
+**Given the polynomial $P(x) = x^5 - 4x^3 + x^2 - 7$, classify it by degree and the number of terms.**\
+Since the highest exponenta is 5 => degree is 5.\
+And we have 4 terms it is called Polynomial with 4 terms (or quadronomial).
+____________
+##### 14
+**Simplify $(2x^4 - 3x^3 + x - 5) + (x^3 - 2x^2 + 4x + 7)$**\
+$2x^4 - 2x^3 - 2x^2 + 5x + 2$
+___________
+##### 15
+**Find the product $(x^2 - x + 2)(x^2 + x + 1)$**\
+$x^4 + x^3 + x^2 - x^3 - x^2 - x + 2x^2 + 2x + 2$\
+$x^4 + 2x^2 + x + 2$
+________
+##### 16
+**Find the GCD and LCM of $24x^3y^2z^5$ and $36x^5y^3z^2$.**\
+GCD is: $12x^3y^2z^2.$\
+LCM is: $72x^5y^3z^5.$
+______
+##### 17
+**Factor $x^4 - 13x^2 + 36$.**\
+$(x^2 - 9)(x^2 - 4)$\
+$(x - 3)(x + 3)(x-2)(x + 2)$
+_____
+##### 18
+**Expand $(2x + 3y)^5$ using the Binomial Theorem.**\
+First, from the Pascal's theorem we got indexes for $n=5$ for each term of the polynomial, they are: 1, 5, 10, 10, 5, 1.\
+It is going to be looking like this: $X + 5XY + 10XY + 10XY + 5XY + Y$\
+Now, let find exponents for each elements of the every term using $(a + b)^2 = \sum_{k=0}^{n}\left(_{k}^n\right)a^{n-k}b^k$.\
+$k = 0:\left(_{0}^5\right)(2x)^5(3y)^0=32x^5$\
+$k = 1:\left(_{0}^5\right)(2x)^4(3y)^1=5\times16x^4\times3y=240x^4y$\
+$k = 2:\left(_{0}^5\right)(2x)^3(3y)^2=10\times8x^3\times9y^2=720x^3y^2$\
+$k = 3:\left(_{0}^5\right)(2x)^2(3y)^3=10\times4x^2\times27y^3=1080x^2y^3$\
+$k = 4:\left(_{0}^5\right)(2x)^1(3y)^4=5\times2x\times81y^4=810xy^4$\
+$k = 6:\left(_{0}^5\right)(2x)^0(3y)^5=243y^5$\
+And now combine the polinomial, wich will be look like:\
+$(2x + 3y)^5 = 32x^5 + 240x^4y + 720x^3y^2 + 1080x^2y^3 + 810xy^4 + 243y^5.$
+_______________
+##### 19
+**Divide $6x^3 + 11x^2 - 31x + 15$ by $3x - 1$**\
+$2x^2 + 5x - 7(1reminder)$
+_________
+##### 20
+**List all possible rational zeros of $2x^4 - 5x^3 + x^2 - 4$.**\
+
