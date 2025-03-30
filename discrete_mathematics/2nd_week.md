@@ -124,4 +124,6 @@ $2x^2 + 5x - 7(1reminder)$
 _________
 ##### 20
 **List all possible rational zeros of $2x^4 - 5x^3 + x^2 - 4$.**\
-
+Fractions for $p: \pm1, \pm2, \pm4$\
+Fractions for $q: \pm1, \pm2$\
+=> all possible rational zeros are: $\pm\frac{1}{2}, \pm1, \pm2, \pm4.$
