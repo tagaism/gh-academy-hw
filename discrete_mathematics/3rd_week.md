@@ -34,5 +34,8 @@ Now let's find magnitued of the vector:\
 $|\overrightarrow{v}| = \sqrt{49 + 4 + 16} \approx 8.31$
 __________
 #### 8
-**Given vectors $\overrightarrow{a} = \langle2, -1, 3\rangle$ and $\overrightarrow{b} = \langle{-1, 4, 2}\rangle$, compute $3\overrightarrow{a} - 2\overrightarrow{b}$**
-\
+**Given vectors $\overrightarrow{a} = \langle2, -1, 3\rangle$ and $\overrightarrow{b} = \langle{-1, 4, 2}\rangle$, compute $3\overrightarrow{a} - 2\overrightarrow{b}$**\
+$3\langle-2, -1, 3\rangle - 2\langle-1, 4, 2\rangle$\
+$\langle-6, 3, 9\rangle - \langle-2, 8, 4\rangle$\
+$\langle8, -11, 5\rangle$
+
