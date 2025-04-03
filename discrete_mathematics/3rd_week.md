@@ -26,9 +26,13 @@ First, find vector $\overrightarrow{AB} = \langle4 - 1, 6 - 2, 9 - 3\rangle = \l
 Now, find the magnitude: $|\overrightarrow{AB}| = \sqrt{3^2 + 4^2 + 6^2} = \sqrt{61}$\
 Now to find the unit vector we have to devide it by magnitude.\
 $\hat{v} = \frac{\overrightarrow{AB}}{|\overrightarrow{AB}|} = \langle\frac{3}{\sqrt{61}}\frac{4}{\sqrt{61}}\frac{6}{\sqrt{61}}\rangle$
-
+___________
 #### 7
 **Express the vector $\overrightarrow{v} = 7\hat{i} - 2\hat{j} + 4\hat{k}$**\
 $\begin{bmatrix} 7\\-2\\ 4 \end{bmatrix}$\
 Now let's find magnitued of the vector:\
 $|\overrightarrow{v}| = \sqrt{49 + 4 + 16} \approx 8.31$
+__________
+#### 8
+**Given vectors $\overrightarrow{a} = \langle2, -1, 3\rangle$ and $\overrightarrow{b} = \langle{-1, 4, 2}\rangle$, compute $3\overrightarrow{a} - 2\overrightarrow{b}$**
+\
