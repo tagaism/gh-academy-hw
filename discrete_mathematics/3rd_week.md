@@ -38,4 +38,3 @@ __________
 $3\langle-2, -1, 3\rangle - 2\langle-1, 4, 2\rangle$\
 $\langle-6, 3, 9\rangle - \langle-2, 8, 4\rangle$\
 $\langle8, -11, 5\rangle$
-
