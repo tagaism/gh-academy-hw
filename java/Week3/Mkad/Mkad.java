@@ -7,13 +7,16 @@ public class Mkad {
         Scanner sc = new Scanner(System.in);
         int v = sc.nextInt();
         int t = sc.nextInt();
-        int mkad = 109;
-        int dist
-        if(v > 0) {
-            dist = v * t;
+        int yamanote = 109;
+        int point;
+        if(v == 0 || t == 0) {
+            point = 0;
+        } else if(v > 0) {
+            point = v * t % yamanote;
         } else {
-
+            point = yamanote - Math.abs(v * t) % yamanote;
         }
-        sc.close();        
+        System.out.println(point);
+        sc.close();
     }
 }
