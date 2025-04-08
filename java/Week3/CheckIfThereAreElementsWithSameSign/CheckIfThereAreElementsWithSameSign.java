@@ -1,4 +1,4 @@
-package Week3.CheckIfThereAreElementsWithSameSign;
+// package Week3.CheckIfThereAreElementsWithSameSign;
 
 import java.util.Scanner;
 
@@ -10,10 +10,11 @@ public class CheckIfThereAreElementsWithSameSign {
         for(int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
-        int sign = 0;
-        for(int i = 1; i < arr.length; i++) {
-            if(arr[i] > 0) {
-                
+        String counter = "NO";
+        for(int i = 0; i < arr.length - 1; i++) {
+            if((arr[i] > 0 && arr[i + 1] > 0) || (arr[i] < 0 && arr[i + 1] < 0)) {
+                counter = "YES";
+                break;
             }
         }
         System.out.println(counter);
