@@ -11,7 +11,6 @@ public class PeteNumber {
             arr[i] = sc.nextInt();
         }
         int pHeight = sc.nextInt();
-
         boolean theLowest = true;
         for(int i = 0; i < l; i++) {
             if(pHeight > arr[i]) {
