@@ -47,7 +47,7 @@ public class SuperShift {
             d--;
         }
 
-        for(int k = 0; i < l; k++) {
+        for(int k = 0; k < l; k++) {
             System.out.print(arr[k] + " ");
         }
         sc.close();
