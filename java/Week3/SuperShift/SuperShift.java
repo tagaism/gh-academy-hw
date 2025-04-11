@@ -3,6 +3,7 @@
 import java.util.Scanner;
 
 public class SuperShift {
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int l = sc.nextInt();
@@ -10,46 +11,32 @@ public class SuperShift {
         for(int i = 0; i < l; i++) {
             arr[i] = sc.nextInt();
         }
-        //reverse arr
-        int i = 0;
-        int j = l - 1;
-        while(i < j) {
-            int t = arr[i];
-            arr[i] = arr[j];
-            arr[j] = t;
-            i++;
-            j--;
-        }
         int step = sc.nextInt();
-        int a, b, c, d;
-        a = 0;
-        d = l - 1;
-        if(step > 0) {
-            b = step - 1;
-            c = step;
-        } else {
-            b = l + step - 1;
-            c = l + step;
-        }
-        while(a < b) {
-            int t = arr[a];
-            arr[a] = arr[b];
-            arr[b] = t;
-            a++;
-            b--;
+        sc.close();
+        
+        int shiftStep = step % l; //since step could be bigger then the arr.length
+        if(step < 0) {
+            shiftStep += l;
         }
 
-        while(c < d) {
-            int t = arr[c];
-            arr[c] = arr[d];
-            arr[d] = t;
-            c++;
-            d--;
+        if(shiftStep > 0) {
+            reverse(arr, 0, l - 1);
+            reverse(arr, 0, shiftStep - 1);
+            reverse(arr, shiftStep, l - 1);
         }
-
+        
         for(int k = 0; k < l; k++) {
             System.out.print(arr[k] + " ");
         }
-        sc.close();
+    }
+
+    private static void reverse(int[] ar, int f, int l) {
+        while(f < l) {
+            int t = ar[f];
+            ar[f] = ar[l];
+            ar[l] = t;
+            f++;
+            l--;
+        }
     }
 }

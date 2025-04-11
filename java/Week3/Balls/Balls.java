@@ -10,6 +10,20 @@ public class Balls {
         for(int i = 0; i < l; i++) {
             arr[i] = sc.nextInt();
         }
+        int[] ballsMap = new int[10];
+
+        boolean flg = true;
+        while(flg) {
+            int c = 1;
+            int prev = -1;
+            for(int i = 0; i < l; i++) {
+                if(arr[i] == prev) {
+                    c++;
+                }
+            }
+        }
+
+
         sc.close();
     }
 }
