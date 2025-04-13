@@ -11,17 +11,16 @@ public class PeteNumber {
             arr[i] = sc.nextInt();
         }
         int pHeight = sc.nextInt();
-        boolean theLowest = true;
+        sc.close();
+
+        int position = 1;
         for(int i = 0; i < l; i++) {
-            if(pHeight > arr[i]) {
-                System.out.println(i + 1);
-                theLowest = false;
+            if(arr[i] >= pHeight) {
+                position++;
+            } else {
                 break;
             }
         }
-        if(theLowest) {
-            System.err.println(arr.length + 1);
-        }
-        sc.close();
+        System.out.println(position);
     }
 }

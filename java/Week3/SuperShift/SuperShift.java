@@ -19,7 +19,7 @@ public class SuperShift {
             shiftStep += l;
         }
 
-        if(shiftStep > 0) {
+        if(shiftStep != 0) {
             reverse(arr, 0, l - 1);
             reverse(arr, 0, shiftStep - 1);
             reverse(arr, shiftStep, l - 1);
