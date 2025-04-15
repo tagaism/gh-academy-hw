@@ -48,14 +48,170 @@ d) (p ∧ r ∧ t) ↔ (q ∧ t) - 32\
 
 ---
 ### 4
-a
-| $p$ | $ \neg p$ | $p \land \neg p$ |
-|-----|-----------|------------------|
-| True | False | False |
-| False | True | False |
-b
+**Exercise 31: Construct a truth table for each of these compound propositions.**
 
-| $p$  | $q$  | $ \neg p$ | $p \land \neg p$ |
-| ---- | ---- | --------- | ---------------- |
-| True | False | False |
-| False | True | False |
+**a) $p \land \neg p$**
+
+| $p$ | $\neg p$ | $p \land \neg p$ |
+|-----|----------|-----------------|
+| T   | F        | F               |
+| F   | T        | F               |
+
+**b) $p \lor \neg p$**
+
+| $p$ | $\neg p$ | $p \lor \neg p$ |
+|-----|----------|----------------|
+| T   | F        | T               |
+| F   | T        | T               |
+
+**c) $(p \lor \neg q) \rightarrow q$**
+
+| $p$ | $q$ | $\neg q$ | $p \lor \neg q$ | $(p \lor \neg q) \rightarrow q$ |
+|-----|-----|----------|-----------------|---------------------------------|
+| T   | T   | F        | T               | T                               |
+| T   | F   | T        | T               | F                               |
+| F   | T   | F        | F               | T                               |
+| F   | F   | T        | T               | F                               |
+
+**d) $(p \lor q) \rightarrow (p \land q)$**
+
+| $p$ | $q$ | $p \lor q$ | $p \land q$ | $(p \lor q) \rightarrow (p \land q)$ |
+|-----|-----|-----------|-----------|-------------------------------------|
+| T   | T   | T         | T         | T                                   |
+| T   | F   | T         | F         | F                                   |
+| F   | T   | T         | F         | F                                   |
+| F   | F   | F         | F         | T                                   |
+
+**e) $(p \rightarrow q) \leftrightarrow (\neg q \rightarrow \neg p)$**
+
+| $p$ | $q$ | $p \rightarrow q$ | $\neg q$ | $\neg p$ | $\neg q \rightarrow \neg p$ | $(p \rightarrow q) \leftrightarrow (\neg q \rightarrow \neg p)$ |
+|-----|-----|-------------------|----------|----------|-----------------------------|---------------------------------------------------|
+| T   | T   | T                 | F        | F        | T                           | T                                                 |
+| T   | F   | F                 | T        | F        | F                           | T                                                 |
+| F   | T   | T                 | F        | T        | T                           | T                                                 |
+| F   | F   | T                 | T        | T        | T                           | T                                                 |
+
+**f) $(p \rightarrow q) \rightarrow (q \rightarrow p)$**
+
+| $p$ | $q$ | $p \rightarrow q$ | $q \rightarrow p$ | $(p \rightarrow q) \rightarrow (q \rightarrow p)$ |
+|-----|-----|-------------------|-------------------|---------------------------------------------------|
+| T   | T   | T                 | T                 | T                                                 |
+| T   | F   | F                 | T                 | T                                                 |
+| F   | T   | T                 | F                 | F                                                 |
+| F   | F   | T                 | T                 | T                                                 |
+
+### 5
+The first professor wants coffee but since he doesn't know about others he answered "I don't know."\
+The second one also wants it, but answered "I don't know" since he doesn't know if the third one wants.\
+And the third professor doesn't want coffee. And answered "not everyone wants coffee".
+The 1st professor - wants;
+The 2nd - wants;
+The 3rd - doesn't want.
+
+### 6
+**Exercise 7: Use De Morgan's Laws to find the negation of each of the following statements.**
+
+**a) Jan is rich and happy.**
+
+* p: Jan is rich
+* q: Jan is happy
+* Original statement: $p \land q$
+* Negation: $\neg(p \land q)$
+* De Morgan's Law: $\neg(p \land q) \equiv \neg p \lor \neg q$
+* Negated statement: Jan is not rich or Jan is not happy.
+
+**b) Carlos will bicycle or run tomorrow.**
+
+* p: Carlos will bicycle tomorrow
+* q: Carlos will run tomorrow
+* Original statement: $p \lor q$
+* Negation: $\neg(p \lor q)$
+* De Morgan's Law: $\neg(p \lor q) \equiv \neg p \land \neg q$
+* Negated statement: Carlos will not bicycle and Carlos will not run tomorrow.
+
+**c) Mei walks or takes the bus to class.**
+
+* p: Mei walks to class
+* q: Mei takes the bus to class
+* Original statement: $p \lor q$
+* Negation: $\neg(p \lor q)$
+* De Morgan's Law: $\neg(p \lor q) \equiv \neg p \land \neg q$
+* Negated statement: Mei does not walk to class and Mei does not take the bus to class.
+
+**d) Ibrahim is smart and hardworking.**
+
+* p: Ibrahim is smart
+* q: Ibrahim is hardworking
+* Original statement: $p \land q$
+* Negation: $\neg(p \land q)$
+* De Morgan's Law: $\neg(p \land q) \equiv \neg p \lor \neg q$
+* Negated statement: Ibrahim is not smart or Ibrahim is not hardworking.
+
+### 7
+**Exercise 9: Show that each of these conditional statements is a tautology by using truth tables.**
+
+**a) $(p \land q) \rightarrow p$**
+
+| $p$ | $q$ | $p \land q$ | $(p \land q) \rightarrow p$ |
+|-----|-----|-------------|-----------------------------|
+| T   | T   | T           | T                           |
+| T   | F   | F           | T                           |
+| F   | T   | F           | T                           |
+| F   | F   | F           | T                           |
+
+This is a tautology.
+
+**b) $p \rightarrow (p \lor q)$**
+
+| $p$ | $q$ | $p \lor q$ | $p \rightarrow (p \lor q)$ |
+|-----|-----|-------------|-----------------------------|
+| T   | T   | T           | T                           |
+| T   | F   | T           | T                           |
+| F   | T   | T           | T                           |
+| F   | F   | F           | T                           |
+
+This is a tautology.
+
+**c) $\neg p \rightarrow (p \rightarrow q)$**
+
+| $p$ | $q$ | $\neg p$ | $p \rightarrow q$ | $\neg p \rightarrow (p \rightarrow q)$ |
+|-----|-----|----------|-------------------|--------------------------------------|
+| T   | T   | F        | T                 | T                                       |
+| T   | F   | F        | F                 | T                                       |
+| F   | T   | T        | T                 | T                                       |
+| F   | F   | T        | T                 | T                                       |
+
+This is a tautology.
+
+**d) $(p \land q) \rightarrow (p \rightarrow q)$**
+
+| $p$ | $q$ | $p \land q$ | $p \rightarrow q$ | $(p \land q) \rightarrow (p \rightarrow q)$ |
+|-----|-----|-------------|-------------------|---------------------------------------------|
+| T   | T   | T           | T                 | T                                             |
+| T   | F   | F           | F                 | T                                             |
+| F   | T   | F           | T                 | T                                             |
+| F   | F   | F           | T                 | T                                             |
+
+This is a tautology.
+
+**e) $(p \rightarrow q) \rightarrow p$**
+
+| $p$ | $q$ | $p \rightarrow q$ | $(p \rightarrow q) \rightarrow p$ |
+|-----|-----|-------------------|-----------------------------|
+| T   | T   | T                 | T                           |
+| T   | F   | F                 | T                           |
+| F   | T   | T                 | F                           |
+| F   | F   | T                 | F                           |
+
+This is not a tautology.
+
+**f) $(p \rightarrow q) \rightarrow \neg q$**
+
+| $p$ | $q$ | $p \rightarrow q$ | $\neg q$ | $(p \rightarrow q) \rightarrow \neg q$ |
+|-----|-----|-------------------|---------|--------------------------------------|
+| T   | T   | T                 | F       | F                                       |
+| T   | F   | F                 | T       | T                                       |
+| F   | T   | T                 | F       | F                                       |
+| F   | F   | T                 | T       | T                                       |
+
+This is not a tautology.
