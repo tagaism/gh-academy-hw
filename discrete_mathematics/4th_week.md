@@ -248,3 +248,6 @@ This is not a tautology.
 1. $\neg p \rightarrow (\neg p \lor q)$
 1. $(¬p∨¬q)∨(¬p∨q)$
 1. $¬p∨¬q∨¬p∨q$
+1. $¬p∨¬p∨¬q∨q$
+1. $¬¬p∨T$
+1. $T$
