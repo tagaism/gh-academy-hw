@@ -24,7 +24,7 @@ if Acme Computer had the largest annual revenue.\
 $p \harr q$ - $True$
 
 ---
-#### 2
+### 2
 Let p and q be the propositions\
 p : It is below freezing.\
 q : It is snowing.\
@@ -35,7 +35,7 @@ c) $ \neg  p \land  \neg $ q\
 d) $ \neg (p \lor q) $\
 e) $ p \rarr q$\
 f) $ (p \lor q) \land (\neg q \rarr p)$\
-g) $ p \rarr q$\
+g) $ p \rarr q$
 
 ---
 ### 3
