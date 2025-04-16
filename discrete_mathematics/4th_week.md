@@ -109,7 +109,7 @@ The 2nd - wants;
 The 3rd - doesn't want.
 
 ### 6
-**Exercise 7: Use De Morgan's Laws to find the negation of each of the following statements.**
+** Use De Morgan's Laws to find the negation of each of the following statements.**
 
 **a) Jan is rich and happy.**
 
@@ -148,7 +148,7 @@ The 3rd - doesn't want.
 * Negated statement: Ibrahim is not smart or Ibrahim is not hardworking.
 
 ### 7
-**Exercise 9: Show that each of these conditional statements is a tautology by using truth tables.**
+** Show that each of these conditional statements is a tautology by using truth tables.**
 
 **a) $(p \land q) \rightarrow p$**
 
@@ -215,3 +215,36 @@ This is not a tautology.
 | F   | F   | T                 | T       | T                                       |
 
 This is not a tautology.
+
+### 8
+**Show that each of these conditional statements is a tautology without using truth tables.**\
+**a)  $(p \land q) \rightarrow p$**\
+1. $(p \land q) \rightarrow p$
+2. $\neg (p \land q) \lor p$
+3. $(\neg p \lor \neg q) \lor p$
+4. $\neg p \lor (\neg q \lor p)$
+5. $\neg p \lor (p \lor \neg q)$
+6. $(\neg p \lor p) \lor \neg q$
+7. $T \lor \neg q$
+8. $T$\
+
+**b)  $p \rightarrow (p \lor q)$**\
+1. $p \rightarrow (p \lor q)$
+1. $\neg p \lor (p \lor q)$
+1. $\neg p \lor p \lor q$
+1. $T \lor q$
+1. $T$\
+
+**c)  $\neg p \rightarrow (p \rightarrow q)$**\
+1. $\neg p \rightarrow (p \rightarrow q)$
+1. $\neg p \rightarrow (\neg p \lor q)$
+1. $\neg(\neg p) \lor (\neg p \lor q)$
+1. $p \lor \neg p \lor q$
+1. $T \lor q$
+1. $T$
+
+**d)  $(p \land q) \rightarrow (p \rightarrow q)$**\
+1. $\neg p \rightarrow (p \rightarrow q)$
+1. $\neg p \rightarrow (\neg p \lor q)$
+1. $(¬p∨¬q)∨(¬p∨q)$
+1. $¬p∨¬q∨¬p∨q$
