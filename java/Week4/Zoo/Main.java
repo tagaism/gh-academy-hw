@@ -14,6 +14,5 @@ public class Main {
         for(Animal creature : zoo) {
             creature.makeSound();
         }
-
     }
 }
