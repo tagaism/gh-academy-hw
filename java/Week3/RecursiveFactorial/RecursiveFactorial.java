@@ -8,7 +8,7 @@ public class RecursiveFactorial{
         int n = sc.nextInt();
         sc.close();
         int[] memo = new int[n];
-        Arrays.fill(memo, 1);
+        Arrays.fill(memo, -1);
         System.out.println(factorial(n, memo));
     }
 
