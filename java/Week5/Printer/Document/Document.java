@@ -5,7 +5,7 @@ import Week5.Printer.IPrintable.IPrintable;
 public class Document implements IPrintable{
     private String fileName;
     public Document(String fileName) {
-
+        setFileName(fileName);
     }
 
     public void setFileName(String fileName) {
