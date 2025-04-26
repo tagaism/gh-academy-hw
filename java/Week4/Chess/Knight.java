@@ -1,12 +1,14 @@
-package Week4.Chess.Knight;
+package Week4.Chess;
 
-public class Knight {
+public class Knight extends Piece{
     // Implement knight-specific movement
     Knight(int x, int y, String color) {
-        this.isWhite = color.equals("white");
-        this.x = x;
-        this.y = y;
+        // this.isWhite = color.equals("white");
+        // this.x = x;
+        // this.y = y;
+        super(x, y, color);
     }
+
     public boolean canMove(int moveTox, int moveToy) {
         //takes new place on the board and return True if it 
         // is legal place ot move (L-shape). Otherwise returns False.
