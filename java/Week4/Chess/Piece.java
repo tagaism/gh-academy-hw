@@ -12,4 +12,8 @@ public abstract class Piece {
         this.y = y;
         this.color = color;
     }
+
+    protected boolean canMove(int nx, int ny) {
+        return false;
+    }
 }
