@@ -2,14 +2,23 @@ package Week4.Chess;
 
 public class Knight extends Piece{
     // Implement knight-specific movement
-    Knight(int x, int y, String color) {
+    public Knight(int x, int y, String color) {
         super(x, y, color);
     }
 
+    public String name() {
+        return "Knight";
+    }
+
+    public String show() {
+        return this.isWhite() ? "\u2658" : "\u265E";
+    }
+
     public boolean canMove(int nx, int ny) {
-        // x: 4, y: 4
-        // nx: 5, ny: 2       1   2   3  4   5  6   7    8
-        int[] dx = new int[] {1,  2,  2, 1, -1, -2, -2, -1};
+        if(!this.isInBoard(ny, nx)) {
+            return false;
+        }
+        int[] dx = new int[] {1,   2, 2, 1, -1, -2, -2, -1};
         int[] dy = new int[] {-2, -1, 1, 2,  2,  1, -1, -2};
         
         for(int i = 0; i < 8; i++) {
