@@ -1,7 +1,7 @@
 package Week4.Chess;
 
-public class Empty extends Piece{
-    public Empty(int x, int y, String color) {
+public class EmptyPiece extends Piece{
+    public EmptyPiece(int x, int y, String color) {
         super(x, y, color);
     }
     public String name() {
