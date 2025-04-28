@@ -10,7 +10,9 @@ public class Main {
         System.out.println(p1);
         System.out.println(k2);
 
-        Game g = new Game();
+        Game g = Game.getInstance();
+
         g.printBoard();
+        
     }
 }
