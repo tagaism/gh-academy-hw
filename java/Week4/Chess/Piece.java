@@ -4,8 +4,7 @@ public abstract class Piece {
     // Common attributes and methods
     // black colored pieces start from the bottom of the board (from 7);
     // White colored pieces start from the top of the board (from 0);
-    protected int x;
-    protected int y;
+    protected int x, y;
     protected String color;
     protected Piece(int x, int y, String color) {
         this.x = x;
@@ -18,6 +17,12 @@ public abstract class Piece {
     protected abstract boolean canMove(int nx, int ny);
 
     protected abstract String show();
+
+    protected abstract boolean isEmpty();
+
+    protected String getColor() {
+        return this.color;
+    }
 
     protected void move(int nx, int ny) {
         if(canMove(nx, ny)) {
@@ -42,6 +47,6 @@ public abstract class Piece {
 
     @Override
     public String toString() {
-        return String.format("%s -> x: %d, y: %d, name: %s %s", this.show(), this.x, this.y, this.color, this.name());
+        return String.format("%s -> x: %d, y: %d, name: %s", this.show(), this.x, this.y, this.name());
     }
 }

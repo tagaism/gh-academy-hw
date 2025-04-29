@@ -7,7 +7,7 @@ public class Knight extends Piece{
     }
 
     public String name() {
-        return "Knight";
+        return getColor() + " knight";
     }
 
     public String show() {
@@ -26,6 +26,10 @@ public class Knight extends Piece{
                 return true;
             }
         }
+        return false;
+    }
+
+    public boolean isEmpty() {
         return false;
     }
 }

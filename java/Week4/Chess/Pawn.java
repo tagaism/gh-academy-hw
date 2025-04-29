@@ -7,7 +7,7 @@ public class Pawn extends Piece{
     }
 
     public String name() {
-        return "Pawn";
+        return getColor() + " pawn";
     }
 
     public String show() {
@@ -31,5 +31,9 @@ public class Pawn extends Piece{
             //the initial position of white pawn is 1st row 
             return Math.abs(ny - this.y) <= step;
         }
+    }
+
+    public boolean isEmpty() {
+        return false;
     }
 }

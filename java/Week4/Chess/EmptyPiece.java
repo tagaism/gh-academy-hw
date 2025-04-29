@@ -1,16 +1,21 @@
 package Week4.Chess;
 
 public class EmptyPiece extends Piece{
-    public EmptyPiece(int x, int y, String color) {
+    protected EmptyPiece(int x, int y, String color) {
         super(x, y, color);
     }
-    public String name() {
+    protected String name() {
         return "X";
     }
-    public String show() {
-        return "×";
+    protected String show() {
+        return " ";
     }
-    public boolean canMove(int nx, int ny) {
+
+    protected boolean isEmpty() {
+        return true;
+    }
+
+    protected boolean canMove(int nx, int ny) {
         return false;
     }
 }
