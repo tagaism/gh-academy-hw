@@ -1,14 +1,12 @@
 package Week4.Chess;
 
-public abstract class Piece {
+public abstract class Piece extends Tail {
     // Common attributes and methods
     // black colored pieces start from the bottom of the board (from 7);
     // White colored pieces start from the top of the board (from 0);
-    protected int x, y;
     protected String color;
-    protected Piece(int x, int y, String color) {
-        this.x = x;
-        this.y = y;
+    public Piece(int x, int y, String color) {
+        super(x, y);
         this.color = color;
     }
 
