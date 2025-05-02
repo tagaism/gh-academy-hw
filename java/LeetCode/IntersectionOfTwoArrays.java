@@ -18,26 +18,29 @@ public class IntersectionOfTwoArrays {
         for(int i = 0; i < l; i++) {
             nums2[i] = sc.nextInt();
         }
-
+        sc.close();
+        // ALWAYS BE PAY ATTENTION ON CONSTRAINS!!!!!!!!
         System.out.println(Arrays.toString(solution(nums1, nums2)));
     }
     public static int[] solution(int[] nums1, int[] nums2) {
-        Set<Integer> n1 = new HashSet<>();
-        Set<Integer> intersection = new HashSet<>();
+        int[] seen = new int[1001];
         for(int i : nums1) {
-            if(!n1.contains(i)) {
-                n1.add(i);
-            }
+            seen[i] = 1;
         }
+        int counter = 0;
         for(int i : nums2) {
-            if(n1.contains(i)) {
-                intersection.add(i);
+            if(seen[i] == 1) {
+                seen[i] = 2;
+                counter++;
             }
         }
-        int[] res = new int[intersection.size()];
+        int[] res = new int[counter];
         int idx = 0;
-        for(int i : intersection) {
-            res[idx++] = i;
+        for(int i : nums2) {
+            if(seen[i] == 2) {
+                res[idx++] = i;
+                seen[i] = 1;
+            }
         }
         return res;
     }
