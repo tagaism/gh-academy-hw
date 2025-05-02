@@ -1,8 +1,8 @@
 package LeetCode;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Set;
 import java.util.Scanner;
 
 public class IntersectionOfTwoArrays {
@@ -22,14 +22,23 @@ public class IntersectionOfTwoArrays {
         System.out.println(Arrays.toString(solution(nums1, nums2)));
     }
     public static int[] solution(int[] nums1, int[] nums2) {
-        HashSet<Integer> seen = new HashSet<>();
-        for(int i = 0; i < nums1.length; i++) {
-            for(int j = 0; j < nums2.length; j++) {
-                if(nums1[i] == nums2[j]) {
-                    seen.add(nums1[i]);
-                }
+        Set<Integer> n1 = new HashSet<>();
+        Set<Integer> intersection = new HashSet<>();
+        for(int i : nums1) {
+            if(!n1.contains(i)) {
+                n1.add(i);
             }
         }
-        return seen.stream().mapToInt(Integer::intValue).toArray();
+        for(int i : nums2) {
+            if(n1.contains(i)) {
+                intersection.add(i);
+            }
+        }
+        int[] res = new int[intersection.size()];
+        int idx = 0;
+        for(int i : intersection) {
+            res[idx++] = i;
+        }
+        return res;
     }
 }
