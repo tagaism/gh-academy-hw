@@ -14,32 +14,23 @@ public class IsAnagram {
     }
 
     private static boolean isAnagaram(String a, String b) {
-    }
-}
         if(a.length() != b.length()) {
             return false;
         }
-        HashMap<Character, Integer> mapA = new HashMap<>();
-        HashMap<Character, Integer> mapB = new HashMap<>();
-
-        for(char c : a.toLowerCase().toCharArray()) {
-            if(mapA.containsKey(c)) {
-                mapA.put(c, mapA.get(c)+1);
-            } else {
-                mapA.put(c, 1);
-            }
+        String la = a.toLowerCase();
+        String lb = b.toLowerCase();
+        int[] freq = new int[26];
+        for(char c : la.toCharArray()) {
+            freq[c - 'a']++;
         }
-        for(char c : b.toLowerCase().toCharArray()) {
-            if(mapB.containsKey(c)) {
-                mapB.put(c, mapB.get(c)+1);
-            } else {
-                mapB.put(c, 1);
-            }
+        for(char c : lb.toCharArray()) {
+            freq[c - 'a']--;
         }
-
-        for(char c : mapA.keySet()) {
-            if(mapB.get(c) != mapA.get(c)) {
+        for(int i = 0; i < freq.length; i++) {
+            if(freq[i] != 0) {
                 return false;
             }
         }
         return true;
+    }
+}
