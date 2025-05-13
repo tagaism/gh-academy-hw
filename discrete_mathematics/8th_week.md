@@ -23,3 +23,11 @@ q = -1, r = 2.\
 \
 h) 4 is divided by 1?\
 q = 4, r = 0;
+
+---------------------------------------------------------
+
+### 2
+Find the formula for the integer with smallest absolut value 
+that is congurent to an integer a modulo m, where m is 
+a positive integer.
+
