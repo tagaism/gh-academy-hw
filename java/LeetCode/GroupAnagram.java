@@ -9,7 +9,11 @@ public class GroupAnagram {
 
     public static String[][] groupAnagram(String[] arr) {
         for(String str : arr) {
-            for(String)
+            for(String str1 : arr) {
+                if(!str.equals(str1)) {
+                    System.out.printf("%s, %s, %b\n", str, str1, isAnagram(str1, str));
+                }
+            }
         }
         return new String[][]{};
     }
