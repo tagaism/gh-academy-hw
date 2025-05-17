@@ -31,3 +31,7 @@ Find the formula for the integer with smallest absolut value
 that is congurent to an integer a modulo m, where m is 
 a positive integer.
 
+----------------------------------------------------------
+
+### 6
+**Convert the decimal expansion of each of these integers to a binary expansion.**\
