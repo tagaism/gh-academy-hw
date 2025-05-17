@@ -8,10 +8,12 @@ public class GroupAnagram {
     }
 
     public static String[][] groupAnagram(String[] arr) {
+        int i = 1;
         for(String str : arr) {
             for(String str1 : arr) {
                 if(!str.equals(str1)) {
-                    System.out.printf("%s, %s, %b\n", str, str1, isAnagram(str1, str));
+                    System.out.printf("%2d :%s, %s, %b\n", i, str, str1, isAnagram(str1, str));
+                    i++;
                 }
             }
         }
@@ -21,11 +23,7 @@ public class GroupAnagram {
     public static boolean isAnagram(String st1, String st2) {
         int[] freq = new int[26];
         for(char ch : st1.toCharArray()) {
-            if(freq[ch - 'a'] != 0) {
-                freq[ch - 'a']++;
-            } else {
-                freq[ch - 'a'] = 1;
-            }
+            freq[ch - 'a']++;
         }
 
         for(char ch : st2.toCharArray()) {
