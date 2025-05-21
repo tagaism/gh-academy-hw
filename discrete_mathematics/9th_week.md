@@ -20,5 +20,4 @@ $P(25, 4) = 25! / (25 - 4)! = 25!/21! = 25 * 24 * 23 * 22 = 303600;$\
 
 b) each boall is replaced in the bin after it is removed and bevore the next ball is drawn:\
 In this case we simply implement the multiplication principle:\
-multiplication principle for the case b)?
-$25^4 = 390625$
+multiplication principle $25^4 = 390625$
