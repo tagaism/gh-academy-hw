@@ -14,3 +14,11 @@ Which is $1,313,046,875$
 --------------------------------
 ### 3
 **My city is running a lottery. In the lottery, 25 balls numbered 1 through 25 are placed in a bin. Four balls are drawn one at a time and their numbers are recorded. The winning combination consists of the four selected numbers in the order they are selected. How many winning combinations are there, if:**\
+a) each ball is discarded after it is removed:
+In this case, the order of the balls matters; we can implement the permutation principle:\
+$P(25, 4) = 25! / (25 - 4)! = 25!/21! = 25 * 24 * 23 * 22 = 303600;$\
+
+b) each boall is replaced in the bin after it is removed and bevore the next ball is drawn:\
+In this case we simply implement the multiplication principle:\
+multiplication principle for the case b)?
+$25^4 = 390625$
