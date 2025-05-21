@@ -21,3 +21,11 @@ $P(25, 4) = 25! / (25 - 4)! = 25!/21! = 25 * 24 * 23 * 22 = 303600;$\
 b) each boall is replaced in the bin after it is removed and bevore the next ball is drawn:\
 In this case we simply implement the multiplication principle:\
 multiplication principle $25^4 = 390625$
+____________________________________
+
+### 4
+**On the island of Mumble, the Mumblian alphabet has only 5 letters, and every word in the Mumblian language has no more than 3 letters in it. How many words are possible? (A word can use a letter more than once, but 0 letters does not count as a word.)**\
+For 1-letter words: 5 possibilities (A, B, C, D, E)\
+For 2-letter words: $5^2=25$ possibilities (e.g., AA, AB, AC, BA, BB, etc.)\
+For 3-letter words: $5^3=125$ possibilities.\
+And the sum of all words possibilities is 155.
