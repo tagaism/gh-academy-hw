@@ -29,3 +29,7 @@ For 1-letter words: 5 possibilities (A, B, C, D, E)\
 For 2-letter words: $5^2=25$ possibilities (e.g., AA, AB, AC, BA, BB, etc.)\
 For 3-letter words: $5^3=125$ possibilities.\
 And the sum of all words possibilities is 155.
+____________________________________
+
+### 5
+**The Smith family has 4 sons and 3 daughters. In how many ways can they be seated in a row of 7 chairs such that at least 2 boys are next to each other?**\
