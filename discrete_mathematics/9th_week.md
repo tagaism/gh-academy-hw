@@ -33,3 +33,6 @@ ____________________________________
 
 ### 5
 **The Smith family has 4 sons and 3 daughters. In how many ways can they be seated in a row of 7 chairs such that at least 2 boys are next to each other?**\
+
+Ways to arrange the 3 daughters: 3!=3×2×1=6 ways.
+Ways to arrange the 4 sons in the 4 available slots: 4!=4×3×2×1=24 ways.
