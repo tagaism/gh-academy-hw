@@ -34,5 +34,8 @@ ____________________________________
 ### 5
 **The Smith family has 4 sons and 3 daughters. In how many ways can they be seated in a row of 7 chairs such that at least 2 boys are next to each other?**\
 
-Ways to arrange the 3 daughters: 3!=3×2×1=6 ways.
-Ways to arrange the 4 sons in the 4 available slots: 4!=4×3×2×1=24 ways.
+Ways to arrange the 3 daughters: $3!=3×2×1=6$ ways.
+Ways to arrange the 4 sons in the 4 available slots: $4!=4×3×2×1=24$ ways.
+So, the total number of ways where no two boys are next to each other is indeed $3!×4!=6×24=144.$
+Since $7!$ is the total ways without any restriction. and 144 is a number of ways "no boys sitting to each other" way we just subtract them:\
+$7! - 144 = 4896$ ways
