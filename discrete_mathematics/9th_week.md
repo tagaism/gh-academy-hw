@@ -39,3 +39,7 @@ Ways to arrange the 4 sons in the 4 available slots: $4!=4×3×2×1=24$ ways.
 So, the total number of ways where no two boys are next to each other is indeed $3!×4!=6×24=144.$
 Since $7!$ is the total ways without any restriction. and 144 is a number of ways "no boys sitting to each other" way we just subtract them:\
 $7! - 144 = 4896$ ways
+____________________________________
+
+### 6
+**How many sequences $x_1,x_2,x_3,…,x_7$ can be formed in which all the $x_i$ are integers greater than $0$ and less than $6$, and no two adjacent $x_i$ are equal?**\
