@@ -42,6 +42,7 @@ $7! - 144 = 4896$ ways
 ____________________________________
 
 ### 6
-**How many sequences $x_1,x_2,x_3,…,x_7$ can be formed in which all the $x_i$ are integers greater than $0$ 
+**How many sequences $x_1,x_2,x_3,…,x_7$ can be formed in which all the $x_i$ are integers greater than $0$ and less than $6$, and no two adjacent $x_i$ are equal?**\
+There are 5 distinct integers grater than 0 and less than 6.
 
-and less than $6$, and no two adjacent $x_i$ are equal?**\
+1. 
