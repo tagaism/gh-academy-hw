@@ -1,5 +1,6 @@
 // package Week3.SuperShift;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SuperShift {
@@ -7,6 +8,15 @@ public class SuperShift {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int l = sc.nextInt();
+
+        ArrayList<Integer> a = new ArrayList<>();
+        for(int i = 0; i < l; i++) {
+            int x = sc.nextInt();
+            a.add(x);
+        }
+
+    
+
         int[] arr = new int[l];
         for(int i = 0; i < l; i++) {
             arr[i] = sc.nextInt();
