@@ -46,3 +46,7 @@ ____________________________________
 There are 5 distinct integers grater than 0 and less than 6.
 
 1. 
+
+
+### 8
+**How many distinct arrangements are there of PAPA**\
