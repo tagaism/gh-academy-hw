@@ -43,10 +43,12 @@ ____________________________________
 
 ### 6
 **How many sequences $x_1,x_2,x_3,…,x_7$ can be formed in which all the $x_i$ are integers greater than $0$ and less than $6$, and no two adjacent $x_i$ are equal?**\
-There are 5 distinct integers grater than 0 and less than 6.
-
-1. 
-
+The restriction is that we can use only $1, 2, 3, 4, 5$.\
+For the first place we have 5 choices.\
+Therefor, since the adjacent can't be the same, we have only 4 choices. For the other 5 positions we also have 4 choices for each.\
+Using Multiplication Principle:\
+$5×4×4×4×4×4×4$\
+$5×4^6 = 5×4096 = 20480$
 
 ### 8
 **How many distinct arrangements are there of PAPA**\
