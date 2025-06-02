@@ -52,3 +52,5 @@ $5×4^6 = 5×4096 = 20480$
 
 ### 8
 **How many distinct arrangements are there of PAPA**\
+Here we use Permutation with repetition principle:\
+$\frac{4!}{2! × 2!} = 3 × 4 / 2 = 6$
