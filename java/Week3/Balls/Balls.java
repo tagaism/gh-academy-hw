@@ -1,4 +1,4 @@
-// package Week3.Balls;
+package Week3.Balls;
 // Aisultan solution
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -38,10 +38,6 @@ public class Balls {
             }
             i--;
         }
-        for(int s : st) {
-            System.out.printf("%d ", s);
-        }
-        System.out.println();
         System.out.println(l - st.size());
         // for(int i : arr) {
         //     System.out.printf("%d ", i);
