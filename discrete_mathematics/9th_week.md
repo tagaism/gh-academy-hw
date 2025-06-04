@@ -55,3 +55,13 @@ $5×4^6 = 5×4096 = 20480$
 Here we use Permutation with repetition principle:\
 $\frac{4!}{2! × 2!} = 3 × 4 / 2 = 6$\
 PAPA, PAAP, PPAA, APPA, APAP, AAPP
+____________________________________
+### 9
+**A convex polygon is a polygon in which every interior angle is less than 180 degrees. A diagonal of a convex polygon is a line segment which connects two non-adjacent vertices. Find a formula for the number of diagonals of a convex polygon with n sides, where n is any positive integer greater than 2.**\
+We can use here an "n choose k" formula. Which is looks like: \
+$C(n, k) = \frac{n!}{k!(n - k)!}$\
+Since, the diagonal is a line that connects to vertices that are not adjacent. And the diagonal of two verticies is the same for each direction We can use here an "n choose k" formula. Which is looks like: \
+$C(n, k) = \frac{n!}{k!(n - k)!}$\
+And for our case it is look like:\
+$C(n, 2) = \frac{n!}{2!(n - 2)!}$
+$C(n, 2) = \frac{n * (n - 1) * (n - 2)!}{2(n - 2)!} = \frac{n(n - 1)}{2}$
