@@ -64,4 +64,7 @@ Since, the diagonal is a line that connects to vertices that are not adjacent. A
 $C(n, k) = \frac{n!}{k!(n - k)!}$\
 And for our case it is look like:\
 $C(n, 2) = \frac{n!}{2!(n - 2)!}$
-$C(n, 2) = \frac{n * (n - 1) * (n - 2)!}{2(n - 2)!} = \frac{n(n - 1)}{2}$
+$C(n, 2) = \frac{n * (n - 1) * (n - 2)!}{2(n - 2)!} = \frac{n(n - 1)}{2}$\
+Than substract the overcountings $\frac{n(n - 1)}{2} - n$
+____________________________________
+### 10
