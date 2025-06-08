@@ -16,12 +16,9 @@ public class IsPalindrome {
         // race a car
         ArrayList<Character> chs = new ArrayList<>();
         for(char c : lcs.toCharArray()) {
-            if(c >= 'a' && c <= 'z') {
+            if((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')) {
                 chs.add(c);
             }
-        }
-        if(chs.size() == 1) {
-            return true;
         }
         int l = 0;
         int r = chs.size() - 1;
