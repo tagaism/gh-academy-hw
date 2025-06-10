@@ -3,11 +3,9 @@ package LeetCode;
 public class BinarySearch2D {
     public static void main(String[] args) {
         int[][] matrix = new int[][] {
-            {1},
-            {10},
-            {23}
+            {1,3,5,7},{10,11,16,20},{23,30,34,50}
         };
-        System.out.println(solution(matrix, 5));
+        System.out.println(solution(matrix, 10));
     }
     private static boolean solution(int[][] matrix, int target) {
         int arrIdx = getArrIdx(matrix, target, 0, matrix.length - 1);
@@ -23,7 +21,7 @@ public class BinarySearch2D {
         }
         int m = (l + r) / 2;
         int len = matrix[0].length - 1;
-        if(target > matrix[m][0] && target < matrix[m][len]) {
+        if(target >= matrix[m][0] && target <= matrix[m][len]) {
             return m;
         }
         if(target <= matrix[m][0]) {
