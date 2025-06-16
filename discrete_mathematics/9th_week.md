@@ -69,5 +69,6 @@ Than substract the overcountings $\frac{n(n - 1)}{2} - n$
 ____________________________________
 ### 10
 **In my state's lottery, 48 balls are numbered from 1 to 48, and 6 are chosen. How many different sets of winning numbers are there? (In this lottery, the order in which the numbers are chosen does not matter.)**\
+Solution:
 $\frac{48!}{6!(48-6)!} = \frac{48*47*46*45*44*43}{ 6!} = 12271512$
 ____________________________________
