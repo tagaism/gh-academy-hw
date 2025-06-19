@@ -9,7 +9,7 @@ public class MajorityElement {
     private static int solution(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int n : nums) {
-            map.put(n, map.getOrDefault(n, 1) + 1);
+            map.put(n, map.getOrDefault(n, 0) + 1);
             // if(map.containsKey(n)) {
             //     map.replace(n, map.get(n)+1);
             // } else {
