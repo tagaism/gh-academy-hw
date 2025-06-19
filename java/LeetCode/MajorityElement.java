@@ -7,20 +7,34 @@ public class MajorityElement {
         System.out.println(solution(new int[]{2,2,1,1,1,2,2,4,4,4,4,4,4,4,4,4,4}));
     }
     private static int solution(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+    //     HashMap<Integer, Integer> map = new HashMap<>();
+    //     for(int n : nums) {
+    //         map.put(n, map.getOrDefault(n, 0) + 1);
+    //         // if(map.containsKey(n)) {
+    //         //     map.replace(n, map.get(n)+1);
+    //         // } else {
+    //         //     map.put(n, 1);
+    //         // }
+    //     }
+    //     for(int n : map.keySet()) {
+    //         if(map.get(n) > nums.length / 2) {
+    //             return n;
+    //         }
+    //     }
+    //     return 0;
+        int counter = 0;
+        int candidate = -1;
         for(int n : nums) {
-            map.put(n, map.getOrDefault(n, 0) + 1);
-            // if(map.containsKey(n)) {
-            //     map.replace(n, map.get(n)+1);
-            // } else {
-            //     map.put(n, 1);
-            // }
-        }
-        for(int n : map.keySet()) {
-            if(map.get(n) > nums.length / 2) {
-                return n;
+            if(counter == 0) {
+                candidate = n;
+            }
+            if(candidate == n) {
+                counter++;
+            } else {
+                counter--;
             }
         }
-        return 0;
+        return candidate;
     }
+
 }
