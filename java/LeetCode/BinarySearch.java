@@ -2,7 +2,7 @@ package LeetCode;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] nums = new int[] {};
+        int[] nums = new int[] {1, 3, 5, 6, 10, 12, 14};
         System.out.println(solution(nums, 6, 0, nums.length - 1));
     }
     private static int solution(int[] numss, int tar, int l, int r) {
