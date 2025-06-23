@@ -1,5 +1,7 @@
 package LeetCode;
 
+import java.util.Arrays;
+
 public class ReverseBit {
     public static void main(String[] args) {
         System.out.println(solution(43261596));
@@ -18,6 +20,7 @@ public class ReverseBit {
             l++;
             r--;
         }
+        System.out.println(Arrays.toString(charr));
         return Integer.parseInt(new String(charr), 2);
     }
 }

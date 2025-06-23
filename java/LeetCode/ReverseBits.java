@@ -10,7 +10,7 @@ public class ReverseBits {
         //                                      i
         //0011 1001 0111 1000 0010 1001 0100 0010
         //
-
+        System.out.println();
 
         for(int i = 0; i < 32; i++) {
             int bit = (n >> i) & 1;
