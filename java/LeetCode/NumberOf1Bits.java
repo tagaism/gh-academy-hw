@@ -23,7 +23,7 @@ public class NumberOf1Bits {
         // }
         // return res;
 
-        int res = 0;
+        int res = 0; 
         while(n > 0) {
             if(n % 2 == 1) {
                 res++;
