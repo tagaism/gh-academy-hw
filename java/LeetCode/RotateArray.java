@@ -1,8 +1,13 @@
 package LeetCode;
 
+import java.util.Arrays;
+
 public class RotateArray {
     public static void main(String[] args) {
-        rotate(new []{1, 2, 3, 4, 5, 6, 7}, 3);
+        int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
+        rotate(arr, 3);
+        System.out.println(Arrays.toString(arr));
+
     }
     public static void rotate(int[] nums, int k) {
         // k = 3
