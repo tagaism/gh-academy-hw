@@ -9,6 +9,9 @@ public class ReverseInteger {
         int sign = x / Math.abs(x);
         while(x > 0) {
             int t = x % 10;
+            if(res > (Integer.MAX_VALUE - t) / 10) {
+                return 0;
+            }
             res += t;
             x /= 10;
             if(x > 0) {
