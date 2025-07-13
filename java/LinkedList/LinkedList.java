@@ -244,5 +244,29 @@ public class LinkedList {
         }
         return slow;
     }
+
+    /**
+     * Determines whether the linked list contains a loop (cycle).
+     * <p>
+     * This method uses Floyd's Cycle-Finding Algorithm (also known as the
+     * "tortoise and hare" algorithm) to detect if there is a cycle in the list.
+     * It advances two pointers at different speeds through the list; if they
+     * ever meet, a loop exists.
+     * </p>
+     *
+     * @return {@code true} if the linked list contains a loop; {@code false} otherwise.
+     */
+    public boolean hasLoop() {
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
