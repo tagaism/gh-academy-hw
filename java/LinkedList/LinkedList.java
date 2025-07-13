@@ -41,7 +41,13 @@ public class LinkedList {
         }
     }
 
+    /**
+        * Prints the current state of the linked list, including the head, tail, length,
+        * and all elements in the list. If the list is empty, it indicates that the
+        * head and tail are null and that the list is empty.
+        */
     public void printAll() {
+
         if (length == 0) {
             System.out.println("Head: null");
             System.out.println("Tail: null");
@@ -58,12 +64,20 @@ public class LinkedList {
         }
     }
     
+    /**
+     * Empties the linked list by setting the head and tail to null and resetting the length to 0.
+     */
     public void makeEmpty() {
         head = null;
         tail = null;
         length = 0;
     }
 
+    /**
+        * Appends a new node with the given value to the end of the linked list.
+        *
+        * @param value The value to be added to the end of the list.
+        */
     public void append(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -76,6 +90,12 @@ public class LinkedList {
         length++;
     }
 
+    /**
+        * Removes the last node from the linked list.
+        * If the list is empty, returns null.
+        * If the list contains only one element, both head and tail are set to null.
+        * @return The removed node, or null if the list was empty.
+        */
     public Node removeLast() {
         if (length == 0) return null;
         Node temp = head;
@@ -94,6 +114,11 @@ public class LinkedList {
         return temp;
     }
 
+    /**
+        * Adds a new node with the given value to the beginning of the linked list.
+        *
+        * @param value The integer value to be added to the beginning of the list.
+        */
     public void prepend(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -154,6 +179,12 @@ public class LinkedList {
         return true;
     }
     
+    /**
+     * Removes and returns the node at the specified index in the linked list.
+     *
+     * @param index the position of the node to remove
+     * @return the removed {@link Node} if the index is valid; {@code null} otherwise
+     */
     public Node remove(int index) {
         if(index < 0 || index > length) return null;
         if(index == 0) {
@@ -170,6 +201,13 @@ public class LinkedList {
         return removed;
     }
 
+    /**
+     * Reverses the order of the nodes in the linked list.
+     * <p>
+     * After calling this method, the head of the list will become the tail and vice versa.
+     * The operation is performed in-place and has a time complexity of O(n), where n is the length of the list.
+     * </p>
+     */
     public void reverse() {
         Node temp = head;
         head = tail;
