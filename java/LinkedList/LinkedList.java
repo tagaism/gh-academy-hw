@@ -183,5 +183,28 @@ public class LinkedList {
             temp = after;
         }
     }
+
+    /**
+     * Finds and returns the middle node of the linked list.
+     * If the list is empty, returns null.
+     * 
+     * The method uses two pointers: a slow pointer that moves one step at a time,
+     * and a fast pointer that moves two steps at a time. When the fast pointer
+     * reaches the end of the list, the slow pointer will be at the middle node.
+     * 
+     * @return The middle node of the linked list, or null if the list is empty.
+     */
+    public Node findMiddleNode() {
+        if(head == null) {
+            return null;
+        }
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 }
 
