@@ -36,9 +36,10 @@ public class LinkedList {
     public void printList() {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.value);
+            System.out.printf("%d->", temp.value);
             temp = temp.next;
         }
+        System.out.println();
     }
 
     /**
@@ -267,6 +268,33 @@ public class LinkedList {
             }
         }
         return false;
+    }
+
+    public Node findKthNodeFromEnd(int k) {
+        Node fast = head;
+        Node slow = head;
+        for(int i = 0; i < k; i++) {
+            if(fast == null) {
+                return null;
+            }
+            fast = fast.next;
+        }
+        while(fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    public Node removeKthElementFromEnd(int k) {
+        Node pre = findKthNodeFromEnd(k + 1);
+        if(pre == null) {
+            head = head.next;
+            return head;
+        }
+        Node del = pre.next;
+        pre.next = del.next;
+        return del;
     }
 }
 
