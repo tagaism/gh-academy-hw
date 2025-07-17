@@ -286,6 +286,16 @@ public class LinkedList {
         return slow;
     }
 
+    /**
+     * Removes the k-th element from the end of the linked list.
+     * <p>
+     * If k is 0, removes the last element. If k is equal to the length of the list,
+     * removes the head element.
+     * </p>
+     *
+     * @param k the position from the end (0-based) of the element to remove
+     * @return the removed {@code Node}, or {@code null} if the list is empty or k is out of bounds
+     */
     public Node removeKthElementFromEnd(int k) {
         Node pre = findKthNodeFromEnd(k + 1);
         if(pre == null) {
@@ -296,5 +306,17 @@ public class LinkedList {
         pre.next = del.next;
         return del;
     }
+
+    public int binaryToDecimal() {
+        Node curr = head;
+        int res = 0;
+        while(curr != null) {
+            res *= 2;
+            res += curr.value;
+            curr = curr.next;
+        }
+        return res;
+    }
+    
 }
 
