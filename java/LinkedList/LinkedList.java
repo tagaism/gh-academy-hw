@@ -326,5 +326,33 @@ public class LinkedList {
         return res;
     }
 
+    /**
+     * Rearranges the linked list so that all nodes with values less than {@code x} come before nodes with values
+     * greater than or equal to {@code x}. The relative order of nodes in each partition is preserved.
+     *
+     * @param x the partition value; nodes with values less than {@code x} are moved before nodes with values
+     *          greater than or equal to {@code x}
+     */
+    public void partitionList(int x) {
+        Node dum1 = new Node(0);
+        Node dum2 = new Node(0);
+        Node c1 = dum1;
+        Node c2 = dum2;
+        Node curr = head;
+        while(curr != null) {
+            Node t = new Node(curr.value);
+            if(t.value < x) {
+                c1.next = t;
+                c1 = c1.next;
+            } else {
+                c2.next = t;
+                c2 = c2.next;
+            }
+            curr = curr.next;
+        }
+        c1.next = dum2.next;
+        tail = c2;
+        head = dum1.next;
+    }
 }
 
