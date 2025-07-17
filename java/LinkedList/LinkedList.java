@@ -307,6 +307,14 @@ public class LinkedList {
         return del;
     }
 
+    
+    /**
+     * Converts the binary number represented by the linked list into its decimal equivalent.
+     * Each node in the linked list contains a single binary digit (0 or 1), with the head node
+     * representing the most significant bit.
+     *
+     * @return the decimal value of the binary number stored in the linked list
+     */
     public int binaryToDecimal() {
         Node curr = head;
         int res = 0;
@@ -317,6 +325,6 @@ public class LinkedList {
         }
         return res;
     }
-    
+
 }
 
