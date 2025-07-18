@@ -43,4 +43,27 @@ public class DoublyLinkedList {
         }
         length++;
     }
+
+    /**
+     * Removes and returns the last node from the doubly linked list.
+     *
+     * @return the removed {@code Node} if the list is not empty; {@code null} otherwise
+     */
+    public Node removeLast() {
+        if(length == 0) return null;
+        Node temp = tail;
+        //      t
+        //1 2 3 4 5
+        //        tmp
+        tail = temp.prev;
+        if(length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            tail.next = null;
+            temp.prev = null;
+        }
+        length--;
+        return temp;
+    }
 }
