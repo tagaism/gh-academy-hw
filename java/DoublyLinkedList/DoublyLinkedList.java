@@ -66,4 +66,26 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+
+    /**
+     * Removes and returns the first node from the doubly linked list.
+     *
+     * @return the removed Node if the list is not empty; otherwise, returns null.
+     *         If the list has only one node, both head and tail are set to null.
+     *         Otherwise, updates the head and properly disconnects the removed node.
+     */
+    public Node removeFirst() {
+        if(length == 0) return null;
+        Node temp = head;
+        head = head.next;
+        if(length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            head.prev = null;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
 }
