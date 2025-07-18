@@ -88,4 +88,19 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+
+    /**
+     * Retrieves the node at the specified index in the doubly linked list.
+     *
+     * @param idx the zero-based index of the node to retrieve
+     * @return the {@code Node} at the specified index, or {@code null} if the index is out of bounds or the list is empty
+     */
+    public Node get(int idx) {
+        if(idx >= length || idx < 0 || length == 0) return null;
+        Node curr = head;
+        while(idx-- != 0) {
+            curr = curr.next;
+        }
+        return curr;
+    }
 }
