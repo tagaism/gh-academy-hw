@@ -171,4 +171,34 @@ public class DoublyLinkedList {
         length++;
         return true;
     }
+
+    /**
+     * Removes and returns the node at the specified index in the doubly linked list.
+     * <p>
+     * If the index is 0, removes the first node.
+     * If the index is the last position, removes the last node.
+     * Otherwise, removes the node at the given index and updates the links of adjacent nodes.
+     * </p>
+     *
+     * @param idx the index of the node to remove
+     * @return the removed {@code Node}, or {@code null} if the index is invalid
+     */
+    public Node remove(int idx) {
+        if(idx == 0) {
+            return removeFirst();
+        }
+        if(idx == length - 1) {
+            return removeLast();
+        }
+        Node temp = get(idx);
+        if(temp == null) return null;
+        Node before = temp.prev;
+        Node after = temp.next;
+        before.next = after;
+        after.prev = before;
+        temp.next = null;
+        temp.prev = null;
+        length--;
+        return temp;
+    }
 }
