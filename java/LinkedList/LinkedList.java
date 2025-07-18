@@ -354,5 +354,20 @@ public class LinkedList {
         tail = c2;
         head = dum1.next;
     }
+
+    public void swapPairs() {
+        Node d = new Node(0);
+        d.next = head;
+        Node f = head;
+        Node p = d;
+        while(f != null && f.next != null) {
+            Node s = f.next;
+            p.next = s;
+            s.next = f;
+            p = f;
+            f = f.next;
+        }
+        head = d.next;
+    }
 }
 
