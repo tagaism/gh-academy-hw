@@ -355,6 +355,11 @@ public class LinkedList {
         head = dum1.next;
     }
 
+    /**
+     * Swaps every two adjacent nodes in the linked list.
+     * For example, given 1->2->3->4, after calling this method the list becomes 2->1->4->3.
+     * The operation is performed in-place and updates the head of the list.
+     */
     public void swapPairs() {
         Node d = new Node(0);
         d.next = head;
