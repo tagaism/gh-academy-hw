@@ -103,4 +103,11 @@ public class DoublyLinkedList {
         }
         return curr;
     }
+
+    public boolean set(int idx, int val) {
+        Node temp = get(idx);
+        if(temp == null) return false;
+        temp.value = val;
+        return true;
+    }
 }
