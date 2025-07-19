@@ -201,4 +201,26 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+
+    /**
+     * Checks whether the doubly linked list is a palindrome.
+     * A palindrome is a sequence that reads the same backward as forward.
+     * This method compares the values from the head and tail of the list,
+     * moving towards the center, and returns {@code true} if all corresponding
+     * values are equal, otherwise returns {@code false}.
+     *
+     * @return {@code true} if the list is a palindrome, {@code false} otherwise
+     */
+    public boolean isPalindrome() {
+        Node left = head;
+        Node right = tail;
+        while(left != right && right.next != left) {
+            if(left.value != right.value) {
+                return false;
+            }
+            left = left.next;
+            right = right.prev;
+        }
+        return true;
+    }
 }
