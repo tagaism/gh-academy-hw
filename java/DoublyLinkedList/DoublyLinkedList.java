@@ -223,4 +223,8 @@ public class DoublyLinkedList {
         }
         return true;
     }
+
+    public void partitionBy(int x) {
+        
+    }
 }
