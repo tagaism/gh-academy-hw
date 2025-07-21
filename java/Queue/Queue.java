@@ -37,4 +37,25 @@ public class Queue {
         }
         length++;
     }
+
+    /**
+     * Removes and returns the node at the front of the queue.
+     * If the queue is empty, returns {@code null}.
+     * Updates the first and last pointers as necessary.
+     *
+     * @return the removed {@code Node} from the front of the queue, or {@code null} if the queue is empty
+     */
+    public Node dequeue() {
+        if(length == 0) return null;
+        Node temp = first;
+        if(length == 1) {
+            first = null;
+            last = null;
+        } else {
+            first = first.next;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
 }
