@@ -224,7 +224,38 @@ public class DoublyLinkedList {
         return true;
     }
 
+    /**
+     * Rearranges the nodes in the doubly linked list such that all nodes with values
+     * less than or equal to the specified value {@code x} come before nodes with values
+     * greater than {@code x}. The relative order of nodes within each partition is preserved.
+     *
+     * @param x the partition value; nodes with values greater than {@code x} are moved after nodes with values less than or equal to {@code x}
+     */
     public void partitionBy(int x) {
-        
+        Node d1 = new Node(0);
+        Node d2 = new Node(0);
+        Node c1 = d1;
+        Node c2 = d2;
+        Node c = head;
+        while(c != null) {
+            if(c.value > x) {
+                c2.next = c;
+                c.prev = c2;
+                c2 = c;
+            } else {
+                c1.next = c;
+                c.prev = c1;
+                c1 = c;
+            }
+            c = c.next;
+        }
+        c1.next = d2.next;
+        if(d2.next != null) {
+            d2.next.prev = c1;
+        }
+        head = d1.next;
+        if(head != null) {
+            head.prev = null;
+        }
     }
 }
