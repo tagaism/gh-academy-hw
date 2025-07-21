@@ -1,4 +1,57 @@
 package LinkedList;
+/**
+ * A singly linked list implementation supporting common operations such as insertion, deletion,
+ * traversal, reversal, and advanced manipulations. Each node stores an integer value.
+ * <p>
+ * Features:
+ * <ul>
+ *   <li>Append, prepend, insert, and remove nodes by index or value</li>
+ *   <li>Reverse the list in-place</li>
+ *   <li>Find the middle node, detect cycles, and locate k-th node from the end</li>
+ *   <li>Partition the list around a value, swap adjacent pairs, and convert binary to decimal</li>
+ *   <li>Print the list and its metadata</li>
+ * </ul>
+ * <p>
+ * All operations are performed in O(1) or O(n) time, depending on the method.
+ * </p>
+ */
+/**
+ * A singly linked list implementation supporting various operations such as insertion, deletion,
+ * searching, reversing, partitioning, and more.
+ * <p>
+ * Each node in the list contains an integer value and a reference to the next node.
+ * The list maintains references to its head and tail nodes, as well as its current length.
+ * </p>
+ *
+ * <h2>Supported Operations:</h2>
+ * <ul>
+ *   <li>Append, prepend, insert, and remove nodes</li>
+ *   <li>Get and set node values by index</li>
+ *   <li>Reverse the list in-place</li>
+ *   <li>Find the middle node</li>
+ *   <li>Detect cycles (loops) in the list</li>
+ *   <li>Find and remove the k-th node from the end</li>
+ *   <li>Convert a binary number represented by the list to decimal</li>
+ *   <li>Partition the list around a value</li>
+ *   <li>Swap every two adjacent nodes</li>
+ *   <li>Print the list and its metadata</li>
+ * </ul>
+ *
+ * <h2>Usage Example:</h2>
+ * <pre>
+ *     LinkedList list = new LinkedList(1);
+ *     list.append(2);
+ *     list.append(3);
+ *     list.printList(); // Output: 1->2->3->
+ * </pre>
+ *
+ * <h2>Thread Safety:</h2>
+ * <p>
+ * This implementation is <b>not</b> thread-safe.
+ * </p>
+ *
+ * @author tagai
+ */
 public class LinkedList {
 
     private Node head;
@@ -21,18 +74,38 @@ public class LinkedList {
         length = 1;
     }
 
+    /**
+     * Returns the head node of the linked list.
+     *
+     * @return the head {@link Node} of the list, or {@code null} if the list is empty
+     */
     public Node getHead() {
         return head;
     }
 
+    /**
+     * Returns the tail node of the linked list.
+     *
+     * @return the last node in the list, or {@code null} if the list is empty
+     */
     public Node getTail() {
         return tail;
     }
 
+    /**
+     * Returns the current number of elements in the linked list.
+     *
+     * @return the length of the linked list
+     */
     public int getLength() {
         return length;
     }
 
+    /**
+     * Prints the elements of the linked list in order, separated by arrows ("->").
+     * Each node's value is displayed followed by an arrow, ending with a newline.
+     * If the list is empty, only a newline is printed.
+     */
     public void printList() {
         Node temp = head;
         while (temp != null) {
@@ -132,6 +205,14 @@ public class LinkedList {
         length++;
     }
 
+    /**
+     * Removes and returns the first node from the linked list.
+     * If the list is empty, returns {@code null}.
+     * Updates the head to the next node and decrements the length.
+     * If the list becomes empty after removal, sets the tail to {@code null}.
+     *
+     * @return the removed first {@code Node}, or {@code null} if the list is empty
+     */
     public Node removeFirst() {
         if (length == 0) return null;
         Node temp = head;
@@ -144,6 +225,12 @@ public class LinkedList {
         return temp;
     }
 
+    /**
+     * Returns the node at the specified index in the linked list.
+     *
+     * @param index the position of the node to retrieve (0-based)
+     * @return the {@code Node} at the specified index, or {@code null} if the index is out of bounds
+     */
     public Node get(int index) {
         if (index < 0 || index >= length) return null;
         Node temp = head;
@@ -153,6 +240,13 @@ public class LinkedList {
         return temp;
     }
 
+    /**
+     * Updates the value of the node at the specified index in the linked list.
+     *
+     * @param index the position of the node to update
+     * @param value the new value to set for the node
+     * @return true if the node was found and updated; false if the index is out of bounds
+     */
     public boolean set(int index, int value) {
         Node temp = get(index);
         if (temp != null) {
@@ -162,6 +256,13 @@ public class LinkedList {
         return false;
     }
 
+    /**
+     * Inserts a new node with the specified value at the given index in the linked list.
+     *
+     * @param index the position at which to insert the new node (0-based)
+     * @param value the value to be stored in the new node
+     * @return true if the insertion was successful; false if the index is out of bounds
+     */
     public boolean insert(int index, int value)  {
         if (index < 0 || index > length) return false;
         if (index == 0) {
@@ -270,6 +371,15 @@ public class LinkedList {
         return false;
     }
 
+    /**
+     * Finds the k-th node from the end of the linked list.
+     *
+     * This method uses two pointers to locate the k-th node from the end in a single pass.
+     * If k is greater than the length of the list, it returns null.
+     *
+     * @param k the position from the end (1-based index)
+     * @return the k-th {@link Node} from the end of the list, or null if k is out of bounds
+     */
     public Node findKthNodeFromEnd(int k) {
         Node fast = head;
         Node slow = head;
