@@ -38,4 +38,46 @@ public class Stack<T> {
     public void push(T val) {
         stackList.add(val);
     }
+
+    /**
+     * Removes and returns the top element from the stack.
+     * If the stack is empty, returns {@code null}.
+     *
+     * @return the element removed from the top of the stack, or {@code null} if the stack is empty
+     */
+    public T pop() {
+        if(isEmpty()) return null;
+        return stackList.remove(stackList.size() - 1);
+    }
+
+    /**
+     * Returns the element at the top of the stack without removing it.
+     * If the stack is empty, returns {@code null}.
+     *
+     * @return the top element of the stack, or {@code null} if the stack is empty
+     */
+    public T peek() {
+        if(isEmpty()) return null;
+        return stackList.get(stackList.size() - 1);
+    }
+
+    /**
+     * Sorts the given stack in ascending order using an auxiliary stack.
+     * Only works for stacks of Integer type.
+     *
+     * @param st the stack to be sorted
+     */
+    public void sortStack(Stack<Integer> st) {
+        Stack<Integer> aux = new Stack<>();
+        while (!st.isEmpty()) {
+            int temp = st.pop();
+            while (!aux.isEmpty() && aux.peek() > temp) {
+                st.push(aux.pop());
+            }
+            aux.push(temp);
+        }
+        while (!aux.isEmpty()) {
+            st.push(aux.pop());
+        }
+    }
 }
