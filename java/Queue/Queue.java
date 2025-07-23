@@ -64,6 +64,14 @@ public class Queue {
         return temp;
     }
 
+    /**
+     * Adds an element to the end of the queue using two stacks.
+     * This method transfers all elements from the first stack (st1) to the second stack (st2),
+     * pushes the new value onto the first stack, and then moves all elements back from the second stack to the first stack.
+     * This ensures that the queue order is maintained.
+     *
+     * @param val the value to be enqueued
+     */
     public void enqueueStack(int val) {
         while(!st1.isEmpty()) {
             st2.push(st1.pop());
