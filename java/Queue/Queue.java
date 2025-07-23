@@ -1,9 +1,14 @@
 package Queue;
 
+import Stack.Stack;
+
 public class Queue {
     Node first;
     Node last;
     int length;
+
+    private Stack<Integer> st1 = new Stack<Integer>();
+    private Stack<Integer> st2 = new Stack<Integer>();
 
     class Node {
         int value;
@@ -57,5 +62,15 @@ public class Queue {
         }
         length--;
         return temp;
+    }
+
+    public void enqueueStack(int val) {
+        while(!st1.isEmpty()) {
+            st2.push(st1.pop());
+        }
+        st1.push(val);
+        while(!st2.isEmpty()) {
+            st1.push(st2.pop());
+        }
     }
 }
