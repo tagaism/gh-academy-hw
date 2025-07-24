@@ -81,4 +81,8 @@ public class Queue {
             st1.push(st2.pop());
         }
     }
+
+    public void dequeueStack() {
+        
+    }
 }
