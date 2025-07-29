@@ -16,22 +16,40 @@ public class BinarySearchTree {
         return root;
     }
 
+    /**
+     * Inserts a new value into the binary search tree.
+     * <p>
+     * If the tree is empty, the value becomes the root. If the value already exists,
+     * the method returns {@code true} without inserting a duplicate.
+     * Otherwise, the value is inserted at the appropriate position to maintain
+     * the binary search tree property.
+     * </p>
+     *
+     * @param val the integer value to insert into the tree
+     * @return {@code true} if the value was inserted or already exists in the tree
+     */
     public boolean insert(int val) {
         Node nn = new Node(val);
         if(root == null) {
             root = nn;
-        } else {
-            Node curr = new Node(val);
-            while(curr != null) {
-                if(val > curr.value) {
-                    curr.right = nn;
-                    curr = curr.right;
-                } else {
-                    curr.left = nn;
-                    curr = curr.left;
+            return true;
+        }
+        Node temp = root;
+        while(true) {
+            if(val == temp.value) return true;
+            if(val < temp.value) {
+                if(temp.left == null) {
+                    temp.left = nn;
+                    return true;
                 }
+                temp = temp.left;
+            } else {
+                if(temp.right == null) {
+                    temp.right = nn;
+                    return true;
+                }
+                temp = temp.right;
             }
         }
-        return true;
     }
 }
