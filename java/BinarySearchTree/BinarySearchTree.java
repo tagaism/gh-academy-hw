@@ -52,4 +52,24 @@ public class BinarySearchTree {
             }
         }
     }
+
+    /**
+     * Checks whether the binary search tree contains a node with the specified value.
+     *
+     * @param val the value to search for in the tree
+     * @return {@code true} if the value exists in the tree, {@code false} otherwise
+     */
+    public boolean contains(int val) {
+        Node temp = root;
+        while(temp != null) {
+            if(val < temp.value) {
+                temp = temp.left;
+            } else if(val > temp.value) {
+                temp = temp.right;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
 }
