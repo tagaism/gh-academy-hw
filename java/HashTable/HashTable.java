@@ -26,6 +26,29 @@ public class HashTable {
     }
 
     /**
+     * Inserts a key-value pair into the hash table.
+     * If the key's hash index is empty, creates a new node at that index.
+     * If there is a collision (i.e., the index is already occupied), appends the new node
+     * to the end of the linked list at that index.
+     *
+     * @param k   the key to insert
+     * @param val the value associated with the key
+     */
+    public void set(String k, int val) {
+        int idx = hash(k);
+        Node nn = new Node(k, val);
+        if(dataMap[idx] == null) {
+            dataMap[idx] = nn;
+        } else {
+            Node temp = dataMap[idx];
+            while(temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = nn;
+        }
+    }
+
+    /**
      * Prints the contents of the hash table to the standard output.
      * For each index in the hash table, prints the index followed by all key-value pairs
      * stored in the linked list at that index.
