@@ -49,6 +49,24 @@ public class HashTable {
     }
 
     /**
+     * Retrieves the value associated with the specified key from the hash table.
+     *
+     * @param k the key whose associated value is to be returned
+     * @return the value associated with the specified key, or 0 if the key is not found
+     */
+    public int get(String k) {
+        int idx = hash(k);
+        Node temp = dataMap[idx];
+        while(temp != null) {
+            if(temp.key == key) {
+                return temp.value;
+            }
+            temp = temp.next;
+        }
+        return 0;
+    }
+
+    /**
      * Prints the contents of the hash table to the standard output.
      * For each index in the hash table, prints the index followed by all key-value pairs
      * stored in the linked list at that index.
