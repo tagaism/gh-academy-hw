@@ -1,5 +1,7 @@
 package HashTable;
 
+import java.util.ArrayList;
+
 public class HashTable {
     int size = 7;
     Node[] dataMap;
@@ -58,7 +60,7 @@ public class HashTable {
         int idx = hash(k);
         Node temp = dataMap[idx];
         while(temp != null) {
-            if(temp.key == key) {
+            if(temp.key.equals(k)) {
                 return temp.value;
             }
             temp = temp.next;
@@ -81,5 +83,25 @@ public class HashTable {
                 temp = temp.next;
             }
         }
+    }
+
+    /**
+     * Returns a list of all keys stored in the hash table.
+     *
+     * Iterates through each bucket in the underlying data structure and collects
+     * the keys from all nodes, including those in linked lists due to collisions.
+     *
+     * @return an ArrayList containing all keys present in the hash table
+     */
+    public ArrayList<String> keys() {
+        ArrayList<String> allKeys = new ArrayList<>();
+        for(Node n : dataMap) {
+            Node curr = n;
+            while(curr != null) {
+                allKeys.add(curr.key);
+                curr = curr.next;
+            }
+        }
+        return allKeys;
     }
 }

@@ -10,8 +10,11 @@ public class Main {
         table.set("microsoft", 4214);
         table.set("apple", 4214);
         table.set("facebook", 4214);
-        table.set("nvidia", 4214);
+        table.set("nvidia", 421422);
         table.set("spacex", 4214);
         table.printTable();
+        
+        System.out.println(table.keys());
+        System.out.println(table.get("nvidia"));
     }
 }
