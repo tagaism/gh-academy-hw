@@ -24,11 +24,7 @@ public class FirstNonRepeatedChar {
     public static Character solution(String str) {
         HashMap<Character, Integer> map =  new HashMap<>();
         for(char c: str.toCharArray()) {
-            if(map.get(c) == null) {
-                map.put(c, 1);
-            } else {
-                map.put(c, map.get(c) + 1);
-            }
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
         for(char c: str.toCharArray()) {
             if(map.get(c) == 1) {
