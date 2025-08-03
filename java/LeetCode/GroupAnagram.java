@@ -12,6 +12,15 @@ public class GroupAnagram {
         groupAnagrams(strs);
     }
 
+    /**
+     * Groups a list of strings into anagrams.
+     *
+     * <p>This method takes an array of strings and groups them such that each group contains strings that are anagrams of each other.
+     * An anagram is defined as a word or phrase formed by rearranging the letters of another, such as "listen" and "silent".</p>
+     *
+     * @param strs the array of strings to be grouped
+     * @return a list of lists, where each inner list contains strings that are anagrams of each other
+     */
     public static List<List<String>> groupAnagrams(String[] strs) {
         // Map<String, List<String>> ans = new HashMap<>();
 
