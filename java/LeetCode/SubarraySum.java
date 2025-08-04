@@ -7,6 +7,19 @@ public class SubarraySum {
 
     }
 
+    /**
+     * Finds the start and end indices of a contiguous subarray within the given array `nums`
+     * whose elements sum up to the specified `target`.
+     *
+     * Uses a HashMap to store the cumulative sum up to each index and its corresponding index.
+     * If the difference between the current cumulative sum and the target has been seen before,
+     * it means the subarray between the previous index and the current index sums to the target.
+     *
+     * @param nums   the input array of integers
+     * @param target the target sum to find in the subarray
+     * @return       an array of two integers representing the start and end indices of the subarray;
+     *               returns an empty array if no such subarray exists
+     */
     public static int[] solution(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         map.put(0, -1);
