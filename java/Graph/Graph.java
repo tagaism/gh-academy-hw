@@ -59,4 +59,13 @@ public class Graph {
         }
         return false;
     }
-}
+
+    public boolean removeVertex(String vertex) {
+        if(adjList.get(vertex) == null) return false;
+
+        for(String vert : adjList.get(vertex)) {
+            adjList.get(vert).remove(vertex);
+        }
+        adjList.remove(vertex);
+        return true;
+    }
