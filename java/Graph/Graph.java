@@ -60,6 +60,12 @@ public class Graph {
         return false;
     }
 
+
+    /**
+     * Removes a vertex from the graph.
+     * @param vertex The vertex to be removed.
+     * @return true if the vertex was removed successfully, false otherwise (if the vertex does not exist).
+     */
     public boolean removeVertex(String vertex) {
         if(adjList.get(vertex) == null) return false;
 
