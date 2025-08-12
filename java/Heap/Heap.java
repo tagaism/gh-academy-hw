@@ -1,4 +1,4 @@
-package java.Heap;
+package Heap;
 
 import java.util.ArrayList;
 /**
@@ -19,5 +19,24 @@ public class Heap {
 
     public ArrayList<Integer> getHeap() {
         return new ArrayList<>(heap);
+    }
+
+    public boolean insert(int val) {
+        heap.add(val);
+        int curr = heap.size() - 1;
+        while(curr > 0 && heap.get(curr) > heap.get(parent(curr))) {
+            swap(curr, parent(curr));
+            curr = parent(curr);
+        }
+    }
+
+    private int parent(int ind) {
+        return (ind - 1) / 2;
+    }
+
+    private void swap(int ind1, int ind2) {
+        int temp = heap.get(ind1);
+        heap.set(ind1, heap.get(ind2));
+        heap.set(ind2, temp);
     }
 }
