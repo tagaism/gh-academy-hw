@@ -2,13 +2,29 @@ package Heap;
 
 import java.util.ArrayList;
 /**
- * Implements a Min-Heap data structure using an `ArrayList`.
- * This class provides basic heap operations such as insertion,
- * and allows retrieval of the heap's current state.
+ * The {@code Heap} class implements a max-heap data structure using an {@link ArrayList}.
+ * It provides methods for inserting and removing elements while maintaining the heap property.
  * <p>
- * The heap property is maintained such that the value of each node
- * is less than or equal to the value of its children.
- * </p>
+ * The heap is represented as a binary tree, where each parent node is greater than or equal to its child nodes.
+ * This class offers functionality to:
+ * <ul>
+ *   <li>Insert elements into the heap with automatic reordering to preserve the max-heap property.</li>
+ *   <li>Remove the maximum element (root) from the heap, with reordering to maintain the heap structure.</li>
+ *   <li>Retrieve a snapshot of the current heap contents.</li>
+ * </ul>
+ * <p>
+ * Note: The internal {@code ArrayList} is encapsulated and not exposed directly.
+ *
+ * Example usage:
+ * <pre>
+ *     Heap heap = new Heap();
+ *     heap.insert(10);
+ *     heap.insert(20);
+ *     Integer max = heap.remove(); // returns 20
+ * </pre>
+ *
+ * @author tagaism
+ * @version 1.0
  */
 public class Heap {
     private ArrayList<Integer> heap;
@@ -43,7 +59,12 @@ public class Heap {
         }
     }
 
-    public Integer remove() {
+
+    /**
+     * Removes the root (maximum) element from the heap.
+     * If the heap is empty, returns null. After removing the root, the heap is reordered to maintain the heap property.
+     * @return The maximum integer value that was the root of the heap, or null if the heap is empty.
+     */
         if(heap.size() == 0) return null;
         if(heap.size() == 1) {
             return heap.remove(0);
