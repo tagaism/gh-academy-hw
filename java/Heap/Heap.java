@@ -43,6 +43,16 @@ public class Heap {
         }
     }
 
+    public Integer remove() {
+        if(heap.size() == 0) return null;
+        if(heap.size() == 1) {
+            return heap.remove(0);
+        }
+        int removedElement = heap.get(0);
+        heap.set(0, heap.remove(heap.size() - 1));
+        sinkDown(0);
+        return removedElement;
+    }
 
     /**
      * Calculates the index of the parent of a node given its index.
@@ -64,4 +74,5 @@ public class Heap {
         heap.set(ind1, heap.get(ind2));
         heap.set(ind2, temp);
     }
+    
 }
