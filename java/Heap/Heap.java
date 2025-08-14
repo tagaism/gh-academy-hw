@@ -65,6 +65,7 @@ public class Heap {
      * If the heap is empty, returns null. After removing the root, the heap is reordered to maintain the heap property.
      * @return The maximum integer value that was the root of the heap, or null if the heap is empty.
      */
+    public Integer remove() {
         if(heap.size() == 0) return null;
         if(heap.size() == 1) {
             return heap.remove(0);
@@ -75,6 +76,10 @@ public class Heap {
         return removedElement;
     }
 
+    public void sinkDown(int ind) {
+        int maxIndex = ind;
+    }
+
     /**
      * Calculates the index of the parent of a node given its index.
      * @param ind The index of the child node.
@@ -83,7 +88,6 @@ public class Heap {
     private int parent(int ind) {
         return (ind - 1) / 2;
     }
-
 
     /**
      * Swaps two elements in the heap based on their indices.
