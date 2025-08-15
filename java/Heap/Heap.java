@@ -78,6 +78,9 @@ public class Heap {
 
     public void sinkDown(int ind) {
         int maxIndex = ind;
+        while(true) {
+            
+        }
     }
 
     /**
