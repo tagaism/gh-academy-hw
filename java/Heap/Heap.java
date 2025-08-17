@@ -102,5 +102,13 @@ public class Heap {
         heap.set(ind1, heap.get(ind2));
         heap.set(ind2, temp);
     }
+
+    private int leftChild(int ind) {
+        return ind * 2 + 1;
+    }
+
+    private int rightChild(int ind) {
+        return ind * 2 + 2;
+    }
     
 }
