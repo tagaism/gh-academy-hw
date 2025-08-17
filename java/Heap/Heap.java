@@ -103,12 +103,23 @@ public class Heap {
         heap.set(ind2, temp);
     }
 
+    /**
+     * Calculates the index of the left child of a node in the heap.
+     *
+     * @param ind The index of the parent node.
+     * @return The index of the left child of the node.
+     */
     private int leftChild(int ind) {
         return ind * 2 + 1;
     }
 
+    /**
+     * Calculates the index of the right child of a node in a binary heap.
+     *
+     * @param ind The index of the parent node.
+     * @return The index of the right child of the node.
+    */
     private int rightChild(int ind) {
         return ind * 2 + 2;
     }
-    
 }
