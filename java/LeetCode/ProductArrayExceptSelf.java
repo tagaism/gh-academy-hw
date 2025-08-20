@@ -2,10 +2,24 @@ package LeetCode;
 
 public class ProductArrayExceptSelf {
     public static void main(String[] arsgs) {
-
+        int[] arr = new int[]{4, 3, 2, 1, 2};
+        for(int i : solution(arr)) {
+            System.out.printf("%d, ", i);
+        }
+        System.err.println();
     }
 
-    private int[] solution(int[] nums) {
+    /**
+     * Given an array of integers, return a new array where each element at index i is the product of all the numbers in the original array except the one at i.
+     *
+     * The approach involves calculating prefix and suffix products.  The prefix product array stores the product of all elements up to each index.
+     * The suffix product array stores the product of all elements from each index to the end.  The result array is then constructed by multiplying the prefix product
+     * before the index with the suffix product after the index.  Special handling is needed for the first and last elements.
+     *
+     * @param nums The input array of integers.
+     * @return A new array where each element is the product of all numbers in the input array except the number at that index.
+     */
+    private static int[] solution(int[] nums) {
         int n = nums.length;
         int[] prefMult = new int[n];
         prefMult[0] = nums[0];
