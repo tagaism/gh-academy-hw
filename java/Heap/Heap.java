@@ -76,17 +76,25 @@ public class Heap {
         return removedElement;
     }
 
+    /**
+     * Performs the "sink down" operation to maintain the heap property.
+     * Starting from the given index, it compares the node with its children
+     * and swaps it with the larger child if necessary, repeating the process
+     * until the heap property is satisfied.
+     *
+     * @param ind The index of the node to sink down.
+     */
     public void sinkDown(int ind) {
         int maxInd = ind;
         while (true) {
             int leftInd = leftChild(ind);
             int rightInd = rightChild(ind);
 
-            if(heap.get(leftInd) > heap.get(maxInd)) {
+            if(leftInd > heap.size() && heap.get(leftInd) > heap.get(maxInd)) {
                 maxInd = leftInd;
             }
 
-            if(heap.get(rightInd) > heap.get(maxInd)) {
+            if(rightInd > heap.size() && heap.get(rightInd) > heap.get(maxInd)) {
                 maxInd = rightInd;
             }
 
