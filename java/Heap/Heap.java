@@ -77,9 +77,25 @@ public class Heap {
     }
 
     public void sinkDown(int ind) {
-        int maxIndex = ind;
-        while(true) {
-            
+        int maxInd = ind;
+        while (true) {
+            int leftInd = leftChild(ind);
+            int rightInd = rightChild(ind);
+
+            if(heap.get(leftInd) > heap.get(maxInd)) {
+                maxInd = leftInd;
+            }
+
+            if(heap.get(rightInd) > heap.get(maxInd)) {
+                maxInd = rightInd;
+            }
+
+            if(maxInd != ind) {
+                swap(maxInd, ind);
+                ind = maxInd;
+            } else {
+                return;
+            }
         }
     }
 
