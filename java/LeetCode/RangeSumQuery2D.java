@@ -2,6 +2,14 @@ package LeetCode;
 
 public class RangeSumQuery2D {
     private int[][] prefixSums;
+    /**
+        * Constructor for the RangeSumQuery2D class.
+        * Initializes the prefix sums matrix based on the input matrix.
+        * The prefix sums matrix is used to efficiently calculate the sum of elements within a given rectangular region.
+        *
+        * @param matrix The input 2D matrix for which range sum queries will be performed.
+        *               The matrix is assumed to be non-null and rectangular.
+        */
     public RangeSumQuery2D(int[][] matrix) {
         //  j
         //i[3,0,1,4,2],
