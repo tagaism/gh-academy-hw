@@ -7,7 +7,7 @@ import LinkedList.LinkedList;
  * The `solution` method uses the fast and slow pointer approach (Floyd's Cycle-Finding Algorithm)
  * to determine if a cycle exists in the given linked list.
  */
-public class LinkedListCicle {
+public class LinkedListCycle {
     public static void main(String[] args) {
 
     }
