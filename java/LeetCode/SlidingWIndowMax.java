@@ -4,10 +4,35 @@ import java.util.Arrays;
 
 public class SlidingWIndowMax {
     public static void main(String[] args) {
-        
     }
 
-    private int[] solution(int[] nums, int k) {
+    /**
+        * Given an array of integers `nums` and an integer `k`, find the maximum value in each sliding window of size `k`.
+        *
+        * The algorithm divides the input array into blocks of size sqrt(n), where n is the length of the array.
+        * It precomputes the maximum value in each block.
+        * Then, for each sliding window, it finds the maximum value by considering the blocks that are fully contained in the window,
+        * and the elements at the boundaries of the window.
+        *
+        * @param nums The input array of integers.
+        * @param k The size of the sliding window.
+        * @return An array of integers, where each element is the maximum value in the corresponding sliding window.
+        *
+        * Example:
+        * ----------
+        * Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+        * Output: [3,3,5,5,6,7]
+        * Explanation:
+        * Window position                Max
+        * ---------------               -----
+        * [1  3  -1] -3  5  3  6  7       3
+        *  1 [3  -1  -3] 5  3  6  7       3
+        *  1  3 [-1  -3  5] 3  6  7       5
+        *  1  3  -1 [-3  5  3] 6  7       5
+        *  1  3  -1  -3 [5  3  6] 7       6
+        *  1  3  -1  -3  5 [3  6  7]      7
+        */
+    private static int[] solution(int[] nums, int k) {
         int n = nums.length;
         int sqrt = (int) Math.ceil(Math.sqrt(n));
         int[] blocks = new int[sqrt];
