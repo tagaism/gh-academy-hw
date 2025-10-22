@@ -8,7 +8,15 @@ public class LongestConsecutiveSequence {
      }
     int theLargest = 0
     for(int n : set) {
-     a
+      int start = n;
+      int end = n;
+      if(!set.contains(start - 1)) {
+        while(set.contains(end)) {
+          end++; 
+       }
+     } 
+     theLargest = Math.max(theLargest, end - start);
     }
+    return theLargest;
   }    
 }
